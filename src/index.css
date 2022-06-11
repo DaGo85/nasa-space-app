@@ -1,6 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .bg-1 {
+    background-image: url("/public/bg1.jpg");
+  }
+
+  .bg-2 {
+    background-image: url("/public/bg2.jpg");
+  }
+
+  .bg-3 {
+    background-image: url("/public/bg3.jpg");
+  }
+  .bg-setup {
+    @apply bg-fixed bg-center bg-cover bg-no-repeat py-40 md:py-48 lg:py-48 
+    w-full flex flex-col items-center justify-start gap-6 md:gap-12;
+  }
+}
 
 body {
   margin: 0;
