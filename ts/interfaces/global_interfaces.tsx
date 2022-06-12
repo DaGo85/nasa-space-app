@@ -3,3 +3,8 @@ export interface NavBarLinksI {
   link: string;
   label: string;
 }
+
+export interface NavBarBurger {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<any>>;
+}
