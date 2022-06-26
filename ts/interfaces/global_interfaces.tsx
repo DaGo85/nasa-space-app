@@ -6,3 +6,11 @@ export interface NavBarBurger {
 export interface NavBarLinksI {
   toggleNav: (() => void) | undefined;
 }
+
+export interface SocialIconsI {
+  name: string;
+  viewBox: string;
+  svg: string;
+  link: string;
+}
+[];
