@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { NavBarLinkItems } from "../../../assets/data";
-import { NavBarLinksI } from "../../../../ts/interfaces/global_interfaces";
 
-function NavBarLinks({ toggleNav }: NavBarLinksI) {
+function NavBarLinks({ toggleNav }: any) {
   return (
     <>
       {NavBarLinkItems.map((item) => {
@@ -14,7 +13,6 @@ function NavBarLinks({ toggleNav }: NavBarLinksI) {
                 toggleNav!();
               }
             }}
-            className="auth-link-setup"
             key={item.name}
             to={item.link}
           >

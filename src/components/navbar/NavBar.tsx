@@ -12,7 +12,7 @@ function NavBar() {
   };
 
   return (
-    <header className="z-30 w-full pb-2 pt-4 fixed flex flex-col items-center justify-between bg-b/75">
+    <header className="z-30 w-screen pb-2 pt-4 fixed flex flex-row items-center justify-between bg-red-400/75">
       <NavBarLogo />
       <span className="flex md:flex-row-reverse px-4">
         <ul className="hidden md:flex md:flex-row gap-8 items-center">
@@ -22,7 +22,7 @@ function NavBar() {
       <span className="flex md:flex-row-reverse px-4">
         <ul className="hidden md:flex md:flex-row gap-8 items-center">
           <ThemeToggle />
-        </ul>{" "}
+        </ul>
       </span>
       <NavBarHamBurger isOpen={isOpen} setIsOpen={setIsOpen} />
       <ul
