@@ -13,4 +13,3 @@ export interface SocialIconsI {
   svg: string;
   link: string;
 }
-[];
