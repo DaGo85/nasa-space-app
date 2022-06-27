@@ -11,7 +11,10 @@ function NavBarSocialIcons() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox={icon.viewBox}
             >
-              <g className="hover:fill-amber-500" fill="#fff">
+              <g
+                className="hover:fill-primaryLightOn dark:hover:fill-primaryDarkOn"
+                fill="#70787c"
+              >
                 <path d={icon.svg} />
               </g>
             </svg>

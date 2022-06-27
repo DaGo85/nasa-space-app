@@ -7,6 +7,7 @@ function NavBarLinks({ toggleNav }: any) {
       {NavBarLinkItems.map((item) => {
         return (
           <Link
+            className="text-xl font-bold hover:text-primaryLightOn dark:hover:text-primaryDarkOn underline"
             aria-label={item.label}
             onClick={() => {
               if (toggleNav) {

@@ -30,7 +30,3 @@ export interface ThemeProviderI {
   theme: any | undefined;
   setTheme: React.Dispatch<React.SetStateAction<any>>;
 }
-
-export interface ThemeProvider2I extends ThemeProviderI {
-  getInitialTheme: (() => void) | undefined;
-}

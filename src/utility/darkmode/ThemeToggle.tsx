@@ -8,7 +8,10 @@ const ThemeToggle = () => {
 
   return (
     <div
-      className="svg-container"
+      className="cursor-pointer rounded-3xl border-2 p-2 flex items-center justify-center
+     bg-primaryLight dark:bg-primaryDark hover:bg-primaryLight/60
+     dark:hover:bg-primaryDark/60 border-primaryLightOn dark:border-primaryDarkOn
+     hover:border-primaryDarkOn dark:hover:border-primaryLightOn transition-all duration-300 ease-in-out"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? (

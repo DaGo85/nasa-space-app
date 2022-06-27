@@ -14,7 +14,7 @@ function NavBar() {
 
   return (
     <header>
-      <nav className="z-30 w-full pb-2 pt-4 fixed flex flex-col items-center justify-between bg-red-400/75">
+      <nav className="z-30 w-full pb-2 pt-4 fixed flex flex-col items-center justify-between bg-lightVariantSurface/75 dark:bg-darkVariantSurface">
         <span className=" flex flex-row justify-between items-center w-full px-2">
           <NavBarLogo />
           <NavBarSocialIcons />
