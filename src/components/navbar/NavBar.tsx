@@ -21,6 +21,7 @@ function NavBar() {
           <span className="flex md:flex-row-reverse px-4">
             <ul className="hidden md:flex md:flex-row gap-8 items-center">
               <NavBarLinks />
+              <ThemeToggle />
             </ul>
           </span>
 
