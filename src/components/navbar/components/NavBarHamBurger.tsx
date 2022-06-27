@@ -1,10 +1,10 @@
 import { NavBarBurger } from "../../../../ts/interfaces/global_interfaces";
 
 function NavBarHamBurger({ isOpen, setIsOpen }: NavBarBurger) {
-  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
+  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-primaryLightOn dark:bg-primaryDarkOn transition ease transform duration-300`;
   return (
     <button
-      className="md:hidden flex flex-col h-12 w-12 border-2 border-white rounded justify-center items-center group"
+      className="md:hidden flex flex-col h-12 w-12 border-2 border-primaryLightOn dark:border-primaryDarkOn rounded justify-center items-center group"
       onClick={() => setIsOpen!(!isOpen)}
     >
       <div
