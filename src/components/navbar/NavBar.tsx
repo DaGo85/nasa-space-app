@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ThemeToggle from "../../utility/darkmode/ThemeToggle";
 import NavBarHamBurger from "./components/NavBarHamBurger";
+import NavBarLangDropDown from "./components/NavBarLangDropDown";
 import NavBarLinks from "./components/NavBarLinks";
 import NavBarLogo from "./components/NavBarLogo";
 import NavBarSocialIcons from "./components/NavBarSocialIcons";
@@ -20,11 +21,13 @@ function NavBar() {
           <NavBarSocialIcons />
           <span className="md:hidden  px-4">
             <ThemeToggle />
+            <NavBarLangDropDown />
           </span>
           <span className="flex md:flex-row-reverse px-4">
-            <ul className="hidden md:flex md:flex-row gap-8 items-center">
+            <ul className="hidden md:flex md:flex-row gap-4 items-center">
               <NavBarLinks />
               <ThemeToggle />
+              <NavBarLangDropDown />
             </ul>
           </span>
           <NavBarHamBurger isOpen={isOpen} setIsOpen={setIsOpen} />
