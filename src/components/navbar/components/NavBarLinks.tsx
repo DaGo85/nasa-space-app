@@ -3,11 +3,11 @@ import { NavBarLinkItems } from "../../../assets/data";
 
 function NavBarLinks({ toggleNav }: any) {
   return (
-    <>
+    <li className="hidden md:block px-4 items-center justify-between">
       {NavBarLinkItems.map((item) => {
         return (
           <Link
-            className="text-xl font-bold hover:text-primaryLightOn dark:hover:text-primaryDarkOn underline"
+            className="text-xl mx-2 font-bold hover:text-primaryLightOn dark:hover:text-primaryDarkOn underline"
             aria-label={item.label}
             onClick={() => {
               if (toggleNav) {
@@ -21,7 +21,7 @@ function NavBarLinks({ toggleNav }: any) {
           </Link>
         );
       })}
-    </>
+    </li>
   );
 }
 export default NavBarLinks;

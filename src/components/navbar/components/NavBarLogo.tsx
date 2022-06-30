@@ -1,30 +1,17 @@
-
 import { Link } from "react-router-dom";
 
 function NavBarLogo() {
   return (
-    <Link to="/">
+    <Link to="/" className="col-span-4 md:col-span-2">
       <svg
         version="1.1"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        width="218px"
-        height="111px"
         viewBox="0 0 218 111"
-        enableBackground="new 0 0 218 111"
-        xmlSpace="preserve"
-        className="hover:fill-white"
       >
         <image
-          className="hover:fill-white"
           id="image0"
-          width={218}
-          height={111}
-          x={0}
-          y={0}
           href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAABvCAYAAACKGt4dAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
 CXBIWXMAAA7DAAAOwwHHb6hkAAAb/ElEQVR42u2de3hc9X3m3/ecmZEtX7Dj+K4Z2WZsz8gXLgq2

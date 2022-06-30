@@ -8,15 +8,16 @@ const ThemeToggle = () => {
 
   return (
     <div
-      className="cursor-pointer rounded-3xl border-2 p-2 flex items-center justify-center
+      className="cursor-pointer rounded-[50%] border-2 p-2 flex items-center justify-center
      bg-primaryLight dark:bg-primaryDark hover:bg-primaryLight/60
      dark:hover:bg-primaryDark/60 border-primaryLightOn dark:border-primaryDarkOn
-     hover:border-primaryDarkOn dark:hover:border-primaryLightOn transition-all duration-300 ease-in-out"
+     hover:border-primaryDarkOn dark:hover:border-primaryLightOn 
+     transition-all duration-300 ease-in-out w-16 h-16"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? (
         <svg
-          className="w-6 svg-setup"
+          className="w-8 svg-setup"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >
@@ -24,7 +25,7 @@ const ThemeToggle = () => {
         </svg>
       ) : (
         <svg
-          className="w-6 svg-setup"
+          className="w-8 svg-setup"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >
