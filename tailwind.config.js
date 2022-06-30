@@ -4,6 +4,11 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      backgroundImage: {
+        bgLight: "url('/public/light.jpg')",
+        bgDark: "url('/public/dark.jpg')",
+      },
+
       colors: {
         primaryLight: "#00677c",
         primaryLightOn: "#ffffff",
