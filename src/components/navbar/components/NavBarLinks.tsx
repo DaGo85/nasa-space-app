@@ -3,7 +3,7 @@ import { NavBarLinkItems } from "../../../assets/data";
 
 function NavBarLinks({ toggleNav }: any) {
   return (
-    <li className="hidden md:block px-4 items-center justify-between">
+    <>
       {NavBarLinkItems.map((item) => {
         return (
           <Link
@@ -21,7 +21,7 @@ function NavBarLinks({ toggleNav }: any) {
           </Link>
         );
       })}
-    </li>
+    </>
   );
 }
 export default NavBarLinks;

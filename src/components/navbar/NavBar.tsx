@@ -14,25 +14,30 @@ function NavBar() {
   };
 
   return (
-    <header>
-      <nav className="z-30 w-full fixed flex flex-col items-center justify-center bg-lightVariantSurface/75 dark:bg-darkVariantSurface px-2">
-        <span className="flex flex-row items-center justify-center w-full">
+    <header className="relative">
+      <nav className="z-30 w-full fixed grid grid-row-8 justify-center items-center bg-lightVariantSurface/75 dark:bg-darkVariantSurface">
+        <span className=" gap-1 mx-1 grid row-span-4 grid-cols-12 w-full justify-center items-center py-2">
           <NavBarLogo />
           <NavBarSocialIcons />
-          <ul className="flex flex-col items-center justify-between md:flex-row w-1/3 md:w-2/3 ">
-            <NavBarLinks />
-            <li>
+          <ul className="grid grid-rows-9 col-span-4 items-center justify-center md:col-span-7 md:grid-cols-7 md:grid-rows-1">
+            <li className="hidden md:flex md:col-span-4 px-4 items-center justify-between">
+              <NavBarLinks />
+            </li>
+            <li className="row-span-3 flex justify-center md:col-span-1">
               <ThemeToggle />
             </li>
-            <li className="w-1/3 h-12 m-3"></li>
-            <li>
+            <li className="h-12 m-3 row-span-3 md:hidden"></li>
+            <li className="row-span-3 md:col-span-2">
               <NavBarLangDropDown />
             </li>
           </ul>
-          <NavBarHamBurger isOpen={isOpen} setIsOpen={setIsOpen} />
+          <div className="col-span-4 flex justify-center">
+            <NavBarHamBurger isOpen={isOpen} setIsOpen={setIsOpen} />
+          </div>
         </span>
         <ul
-          className={`mt-2 overflow-hidden ease-in-out flex flex-col gap-6 items-center transition-all duration-500   	   
+          className={`mt-2 overflow-hidden ease-in-out row-span-4 flex flex-col w-full
+           gap-6 items-center transition-all duration-500   	   
 				${isOpen ? "h-80" : "h-0"}`}
         >
           <NavBarLinks toggleNav={toggleNav} />
