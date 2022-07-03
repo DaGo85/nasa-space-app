@@ -1,12 +1,14 @@
 import BackGround from "../../components/BackGround";
 import GenericCard from "../../components/GenericCard";
+import { useTranslation } from "react-i18next";
 
 function Impressum() {
+  const { t, i18n } = useTranslation("impressum");
   return (
     <BackGround>
       <div className="h-96 w-full">
         <GenericCard>
-          <h4>NASA space APP</h4>
+          <h4>{t("h1-impressum")}</h4>
           <span className="flex flex-col gap-4 w-full px-6">
             <h5>Gemäß zu § 5 TMG:</h5>
             <hr />
