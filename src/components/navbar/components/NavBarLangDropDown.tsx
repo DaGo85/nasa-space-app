@@ -7,8 +7,6 @@ function NavBarLangDropDown() {
     i18n.changeLanguage(lng);
   };
 
-  // todo replace a with a proper tag
-
   return (
     <>
       <div className="p-2">

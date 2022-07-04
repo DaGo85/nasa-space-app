@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
 import { NavBarLinkItems } from "../../../assets/data";
+import CustomLink from "../../CustomLink";
 
 function NavBarLinks({ toggleNav }: any) {
   return (
     <>
       {NavBarLinkItems.map((item) => {
         return (
-          <Link
+          <CustomLink
             className="text-xl mx-2 font-bold hover:text-primaryLightOn dark:hover:text-primaryDarkOn underline"
             aria-label={item.label}
             onClick={() => {
@@ -18,7 +18,7 @@ function NavBarLinks({ toggleNav }: any) {
             to={item.link}
           >
             {item.name}
-          </Link>
+          </CustomLink>
         );
       })}
     </>
