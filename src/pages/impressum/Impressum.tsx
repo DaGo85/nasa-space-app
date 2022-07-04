@@ -3,7 +3,7 @@ import GenericCard from "../../components/GenericCard";
 import { useTranslation } from "react-i18next";
 
 function Impressum() {
-  const { t, i18n } = useTranslation("impressum");
+  const { t } = useTranslation("impressum");
   return (
     <BackGround>
       <div className="h-96 w-11/12 py-32">
