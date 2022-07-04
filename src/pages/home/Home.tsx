@@ -2,9 +2,9 @@ import BackGround from "../../components/BackGround";
 
 function Home() {
   return (
-    <BackGround>
-      <div className="h-96 w-full"></div>
-    </BackGround>
+    <>
+      <div className=" w-full"></div>
+    </>
   );
 }
 export default Home;
