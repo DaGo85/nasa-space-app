@@ -1,8 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 function NavBarLangDropDown() {
-  const { t } = useTranslation("navbar");
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: any) => {
+    i18n.changeLanguage(lng);
+  };
 
   // todo replace a with a proper tag
 
@@ -29,6 +32,7 @@ function NavBarLangDropDown() {
           >
             <li>
               <button
+                onClick={() => changeLanguage("en")}
                 className="rounded-t bg-black/90 hover:bg-white hover:text-black
                  text-white border-white border-2 py-2 px-4 w-24 
                  flex justify-center transition-all duration-500"
@@ -38,6 +42,7 @@ function NavBarLangDropDown() {
             </li>
             <li>
               <button
+                onClick={() => changeLanguage("de")}
                 className="rounded-b bg-black/90 hover:bg-white hover:text-black 
                 text-white border-white border-2 border-t-0 py-2 px-4 w-24 flex justify-center transition-all duration-500 "
               >
