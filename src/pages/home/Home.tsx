@@ -1,10 +1,4 @@
-import BackGround from "../../components/BackGround";
-
 function Home() {
-  return (
-    <>
-      <div className=" w-full"></div>
-    </>
-  );
+  return <div className="h-screen w-full">hallo welt</div>;
 }
 export default Home;

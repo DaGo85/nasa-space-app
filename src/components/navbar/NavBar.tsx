@@ -14,9 +14,9 @@ function NavBar() {
   };
 
   return (
-    <header className="relative">
+    <header>
       <nav className="z-30 w-full fixed grid grid-row-8 justify-center items-center bg-lightVariantSurface/75 dark:bg-darkVariantSurface/75">
-        <span className=" gap-1 mx-1 grid row-span-4 grid-cols-12 w-full justify-center items-center py-2">
+        <span className=" gap-1 grid row-span-4 grid-cols-12 w-full justify-center items-center py-2">
           <NavBarLogo />
           <NavBarSocialIcons />
           <ul className="grid grid-rows-9 col-span-4 items-center justify-center md:col-span-7 md:grid-cols-7 md:grid-rows-1">
@@ -27,7 +27,7 @@ function NavBar() {
               <ThemeToggle />
             </li>
             <li className="h-12 m-3 row-span-3 md:hidden"></li>
-            <li className="row-span-3 md:col-span-2">
+            <li className="row-span-3 md:col-span-1">
               <NavBarLangDropDown />
             </li>
           </ul>

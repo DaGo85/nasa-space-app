@@ -1,4 +1,3 @@
-import BackGround from "../../components/BackGround";
 import GenericCard from "../../components/GenericCard";
 import { useTranslation } from "react-i18next";
 
