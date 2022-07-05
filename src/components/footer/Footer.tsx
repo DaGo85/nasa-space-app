@@ -38,8 +38,8 @@ function Footer() {
             animate={{ height: 100 }}
             transition={{ duration: 1, ease: "easeIn" }}
             exit={{ height: 0 }}
-            className="w-full h-24 bg-gradient-to-r over from-green-300 to-white 
-         flex-col items-center justify-center absolute bottom-0 gap-2 flex"
+            className="w-full h-24 bg-lightVariantSurface/75 dark:bg-darkVariantSurface/75
+         flex-col items-center justify-center bottom-0 gap-2 fixed flex"
           >
             <h5 className="text-md">
               This App was created by{" "}
@@ -47,20 +47,22 @@ function Footer() {
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-para hover:text-but"
+                className="text-primaryLightOn dark:text-primaryDarkOn
+                hover:text-primaryLightContainerOn hover:dark:text-primaryDarkContainerOn underline"
               >
                 {" "}
                 D. Goergens
               </a>{" "}
             </h5>
             <div className="flex flex-col md:flex-row gap-1 text-xs">
-              <div className="font-bold ">
+              <div className="font-bold">
                 A challenge from{" "}
                 <a
                   href="https://www.frontendmentor.io/home"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-para hover:text-but"
+                  className="dark:text-primaryDarkOn
+                hover:text-primaryLightContainerOn hover:dark:text-primaryDarkContainerOn underline"
                 >
                   {" "}
                   Frontend Mentor
@@ -73,7 +75,8 @@ function Footer() {
                   href="https://github.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-para hover:text-but"
+                  className="dark:text-primaryDarkOn
+                hover:text-primaryLightContainerOn hover:dark:text-primaryDarkContainerOn underline"
                 >
                   {" "}
                   Github
@@ -84,14 +87,16 @@ function Footer() {
         )}
       </AnimatePresence>
       <motion.button
-        className="absolute right-3 bottom-1"
+        className="fixed right-3 bottom-1"
         onClick={() => setIsOpen(!isOpen)}
         variants={rocket}
         animate={isOpen ? "start" : "landing"}
       >
         <motion.button variants={turn} animate={isOpen ? "start" : "landing"}>
           <svg
-            className="w-12 -rotate-90 fill-red-800"
+            className="w-12 -rotate-90 fill-primaryLight 
+            dark:fill-primaryDark hover:fill-primaryLight/60 
+            dark:hover:fill-primaryDark/60"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
           >
