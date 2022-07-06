@@ -1,7 +1,8 @@
+import { NavBarLinksI } from "../../../../ts/interfaces/global_interfaces";
 import { NavBarLinkItems } from "../../../assets/data";
 import CustomLink from "../../CustomLink";
 
-function NavBarLinks({ toggleNav }: any) {
+function NavBarLinks({ toggleNav }: NavBarLinksI) {
   return (
     <>
       {NavBarLinkItems.map((item) => {

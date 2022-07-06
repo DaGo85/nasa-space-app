@@ -21,7 +21,7 @@ function NavBar() {
           <NavBarSocialIcons />
           <ul className="grid grid-rows-9 col-span-4 items-center justify-center md:col-span-7 md:grid-cols-7 md:grid-rows-1">
             <li className="hidden md:flex md:col-span-4 px-4 items-center justify-between">
-              <NavBarLinks />
+              <NavBarLinks toggleNav={undefined} />
             </li>
             <li className="row-span-3 flex justify-center md:col-span-1">
               <ThemeToggle />

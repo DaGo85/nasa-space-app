@@ -1,4 +1,6 @@
-function GenericCard({ children, added }: any) {
+import { GenericCardI } from "../../ts/interfaces/global_interfaces";
+
+function GenericCard({ children, added }: GenericCardI) {
   return (
     <section
       className={`${added} flex flex-col min-w-[320px] 

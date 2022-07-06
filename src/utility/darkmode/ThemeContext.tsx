@@ -1,6 +1,7 @@
 // Context for darkmode
 
 import React, { useContext, useEffect, useState, createContext } from "react";
+import { ThemeProviderI } from "../../../ts/interfaces/global_interfaces";
 
 // Function for checking prefered mode
 
@@ -21,13 +22,17 @@ const getInitialTheme = () => {
 };
 
 // Creates Context
+interface ThemeContextI {
+  theme: string;
+  setTheme: () => void;
+}
 
-const ThemeContext = createContext(null);
+const ThemeContext = createContext<ThemeContextI | null>(null);
 
 // Context Provider
 
 const ThemeProvider = ({ children }: any) => {
-  const [theme, setTheme] = useState<any>(getInitialTheme);
+  const [theme, setTheme] = useState<string>(getInitialTheme);
   const initTheme = getInitialTheme();
 
   const rawSetTheme = (rawTheme: any) => {
