@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 export interface NavBarBurger {
   isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<any>>;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface NavBarLinksI {
@@ -18,17 +18,7 @@ export interface SocialIconsI {
 
 export interface NavBarBurger {
   isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<any>>;
-}
-
-export interface ThemeToggleI {
-  theme: any | undefined;
-  setTheme: React.Dispatch<React.SetStateAction<any>>;
-}
-
-export interface ThemeProviderI {
-  theme: any | undefined;
-  setTheme: React.Dispatch<React.SetStateAction<any>>;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface CustomLinkI {
@@ -49,7 +39,6 @@ export interface NavBarLinksI {
   toggleNav: (() => void) | undefined;
 }
 
-//export interface ThemeProviderI {
-//setTheme: Dispatch<an<;
-//children: ReactNode | Element;
-//}
+export interface Props {
+  children: React.ReactNode;
+}
