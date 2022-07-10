@@ -3,7 +3,11 @@ import { SocialIconsI } from "../../ts/interfaces/global_interfaces";
 export const NavBarLinkItems = [
   { name: "Home", link: "/", label: "link to landing page" },
   { name: "Impressum", link: "/impressum", label: "link to Impressum" },
-  { name: "test1", link: "/test1", label: "link to test1" },
+  {
+    name: "APOD",
+    link: "/APOD",
+    label: "link to APOD(Astronomic picture of the day)",
+  },
   { name: "test2", link: "/test2", label: "link to test2" },
 ];
 
