@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Accordion from "../../components/Accordion";
-import GenericCard from "../../components/GenericCard";
 
 function APOD() {
   const [aPod, setApod] = useState<any>(null);
+  const [getNew, setGetNew] = useState<any>(false);
 
   useEffect(() => {
     const getApod = async () => {
@@ -15,7 +15,7 @@ function APOD() {
     };
 
     getApod();
-  }, []);
+  }, [getNew]);
 
   console.log(JSON.stringify(aPod));
 
@@ -23,17 +23,22 @@ function APOD() {
     <>
       <h1>APOD</h1>
       <h2>Astronomic Picture of the day</h2>
-      <GenericCard added="mt-40">
-        {aPod ? (
-          <div>
-            {aPod.map((item: any, index: any) => (
-              <Accordion item={item} index={index} />
-            ))}
-          </div>
-        ) : (
-          <div></div>
-        )}
-      </GenericCard>
+      <button className="btn-87" onClick={() => setGetNew(!getNew)}>
+        <span>Button</span>
+        <svg aria-hidden>
+          <circle></circle>
+        </svg>
+      </button>
+
+      {aPod ? (
+        <div className="flex flex-col gap-8">
+          {aPod.map((item: any, index: any) => (
+            <Accordion key={index + Date.now()} item={item} index={index} />
+          ))}
+        </div>
+      ) : (
+        <div></div>
+      )}
     </>
   );
 }
