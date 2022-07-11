@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Accordion from "../../components/Accordion";
 import GenericCard from "../../components/GenericCard";
 
 function APOD() {
@@ -8,9 +9,9 @@ function APOD() {
   useEffect(() => {
     const getApod = async () => {
       const res: any = await axios.get(
-        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APOD_API_KEY}&count=1`
+        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APOD_API_KEY}&count=5`
       );
-      setApod(res.data[0]);
+      setApod(res.data);
     };
 
     getApod();
@@ -24,13 +25,11 @@ function APOD() {
       <h2>Astronomic Picture of the day</h2>
       <GenericCard added="mt-40">
         {aPod ? (
-          <span>
-            <h3>{aPod.title}</h3>
-            <h4>Author: {aPod.copyright}</h4>
-            <h4>Date: {aPod.date}</h4>
-            <img src={aPod.url} alt="Astronomic pictur of the day" />
-            <p>{aPod.explanation}</p>
-          </span>
+          <div>
+            {aPod.map((item: any, index: any) => (
+              <Accordion item={item} index={index} />
+            ))}
+          </div>
         ) : (
           <div></div>
         )}
