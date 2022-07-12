@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Accordion from "../../components/Accordion";
+import SkeletonCard from "../../components/skeletons/SkeletonCardApod";
 
 function APOD() {
   const [aPod, setApod] = useState<any>(null);
@@ -30,14 +31,14 @@ function APOD() {
         </svg>
       </button>
 
-      {aPod ? (
+      {!aPod ? (
         <div className="flex flex-col gap-8">
           {aPod.map((item: any, index: any) => (
             <Accordion key={index + Date.now()} item={item} index={index} />
           ))}
         </div>
       ) : (
-        <div></div>
+        <SkeletonCard />
       )}
     </>
   );
