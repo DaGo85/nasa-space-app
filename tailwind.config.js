@@ -19,8 +19,8 @@ module.exports = {
         },
       },
       animation: {
-        skeletonLightBg: "skeletonLoadingLight 1s linear infinite alternate",
-        skeletonDarkBg: "skeletonLoadingDark 1s linear infinite alternate",
+        skeletonLightBg: "skeletonLoadingLight 10s linear infinite alternate",
+        skeletonDarkBg: "skeletonLoadingDark 10s linear infinite alternate",
       },
       colors: {
         primaryLight: "#00677c",
