@@ -24,7 +24,7 @@ function APOD() {
       <h1>APOD</h1>
       <h2>Astronomic Picture of the day</h2>
       <button className="btn-87" onClick={() => setGetNew(!getNew)}>
-        <span>Button</span>
+        <span>New</span>
         <svg aria-hidden>
           <circle></circle>
         </svg>

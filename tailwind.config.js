@@ -8,6 +8,20 @@ module.exports = {
         bgLight: "url('/public/light.jpg')",
         bgDark: "url('/public/dark.jpg')",
       },
+      keyframes: {
+        skeletonLoadingLight: {
+          "0%": { backgroundColor: "#1860a5" },
+          "100%": { backgroundColor: "#ffffff" },
+        },
+        skeletonLoadingDark: {
+          "0%": { backgroundColor: "#a3c9ff" },
+          "100%": { backgroundColor: "#00315c" },
+        },
+      },
+      animation: {
+        skeletonLightBg: "skeletonLoadingLight 1s linear infinite alternate",
+        skeletonDarkBg: "skeletonLoadingDark 1s linear infinite alternate",
+      },
       colors: {
         primaryLight: "#00677c",
         primaryLightOn: "#ffffff",
