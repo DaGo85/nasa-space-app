@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Accordion from "../../components/Accordion";
+import InfoModal from "../../components/InfoModal";
 import SkeletonAccordionApod from "../../components/skeletons/SkeletonAccordionApod";
 import SkeletonCard from "../../components/skeletons/SkeletonCardApod";
 
 function APOD() {
   const [aPod, setApod] = useState<any>(null);
   const [getNew, setGetNew] = useState<any>(false);
+  const [showModal, setShowModal] = useState<any>(false);
 
   useEffect(() => {
     const getApod = async () => {
@@ -19,11 +21,9 @@ function APOD() {
     getApod();
   }, [getNew]);
 
-  console.log(JSON.stringify(aPod));
-
   return (
     <>
-      <h1>APOD</h1>
+      <h1 className="py-30">APOD</h1>
       <h2>Astronomic Picture of the day</h2>
       <button className="btn-87" onClick={() => setGetNew(!getNew)}>
         <span>New</span>
@@ -31,8 +31,15 @@ function APOD() {
           <circle></circle>
         </svg>
       </button>
+      <button className="btn-87" onClick={() => setShowModal(true)}>
+        <span>Info</span>
+        <svg aria-hidden>
+          <circle></circle>
+        </svg>
+      </button>
+      <InfoModal showModal={showModal} setShowModal={setShowModal} />
 
-      {!aPod ? (
+      {aPod ? (
         <div className="flex flex-col gap-8 w-11/12">
           {aPod.map((item: any, index: any) => (
             <Accordion key={index + Date.now()} item={item} index={index} />
