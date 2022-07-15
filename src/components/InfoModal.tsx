@@ -1,8 +1,6 @@
-import { useInfoContext } from "../utility/InfoContext";
+import { InfoModalI } from "../../ts/interfaces/global_interfaces";
 
-function InfoModal() {
-  const { showModal, setShowModal } = useInfoContext();
-
+function InfoModal({ text, showModal, setShowModal }: InfoModalI) {
   return (
     <div
       className={`${
@@ -45,8 +43,7 @@ function InfoModal() {
               />
             </svg>
             <h3 className="mb-5 text-lg font-normal text-tertiaryLight dark:text-tertiaryOn">
-              This is a plcaeholder and will be soon replaced with something
-              meaningfull!
+              {text}
             </h3>
             <button
               onClick={() => {

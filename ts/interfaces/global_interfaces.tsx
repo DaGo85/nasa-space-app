@@ -42,3 +42,9 @@ export interface NavBarLinksI {
 export interface Props {
   children: React.ReactNode;
 }
+
+export interface InfoModalI {
+  text: string;
+  showModal: boolean;
+  setShowModal: (arg0: boolean) => void;
+}

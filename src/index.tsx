@@ -5,7 +5,6 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./utility/darkmode/ThemeContext";
 import "./i18n";
-import { InfoProvider } from "./utility/InfoContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -14,11 +13,9 @@ root.render(
   <React.StrictMode>
     <Suspense fallback={<div>Loading...</div>}>
       <ThemeProvider>
-        <InfoProvider>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
-        </InfoProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </ThemeProvider>
     </Suspense>
   </React.StrictMode>
