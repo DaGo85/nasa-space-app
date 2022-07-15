@@ -1,9 +1,13 @@
-function InfoModal({ showModal, setShowModal }: any) {
+import { useInfoContext } from "../utility/InfoContext";
+
+function InfoModal() {
+  const { showModal, setShowModal } = useInfoContext();
+
   return (
     <div
       className={`${
         showModal ? "block" : "hidden"
-      } overflow-y-auto overflow-x-hidden fixed bottom-50 right-50 left-50 top-50 z-50 md:inset-50 h-modal md:h-full py-80`}
+      } overflow-y-auto overflow-x-hidden fixed bottom-50 right-50 left-50 top-50 z-50 md:inset-50 md:h-full pt-80`}
     >
       <div className="relative p-4 w-full max-w-md h-full md:h-auto">
         <div className="relative bg-lightVariantSurface dark:bg-darkVariantSurface rounded-lg shadow">

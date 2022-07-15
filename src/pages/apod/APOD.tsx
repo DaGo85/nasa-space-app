@@ -4,11 +4,13 @@ import Accordion from "../../components/Accordion";
 import InfoModal from "../../components/InfoModal";
 import SkeletonAccordionApod from "../../components/skeletons/SkeletonAccordionApod";
 import SkeletonCard from "../../components/skeletons/SkeletonCardApod";
+import { useInfoContext } from "../../utility/InfoContext";
 
 function APOD() {
   const [aPod, setApod] = useState<any>(null);
   const [getNew, setGetNew] = useState<any>(false);
-  const [showModal, setShowModal] = useState<any>(false);
+
+  const { setShowModal } = useInfoContext();
 
   useEffect(() => {
     const getApod = async () => {
@@ -37,7 +39,7 @@ function APOD() {
           <circle></circle>
         </svg>
       </button>
-      <InfoModal showModal={showModal} setShowModal={setShowModal} />
+      <InfoModal />
 
       {aPod ? (
         <div className="flex flex-col gap-8 w-11/12">
