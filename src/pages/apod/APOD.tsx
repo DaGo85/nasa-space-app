@@ -6,6 +6,23 @@ import InfoModal from "../../components/InfoModal";
 import SkeletonAccordionApod from "../../components/skeletons/SkeletonAccordionApod";
 import SkeletonCard from "../../components/skeletons/SkeletonCardApod";
 
+import { motion } from "framer-motion";
+
+const accordionVariants = {
+  offscreen: {
+    y: 100,
+  },
+  onscreen: {
+    y: -10,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
 function APOD() {
   const [aPod, setApod] = useState<any>(null);
   const [getNew, setGetNew] = useState<any>(false);
@@ -48,7 +65,15 @@ function APOD() {
       {aPod ? (
         <div className="flex flex-col gap-8 w-11/12">
           {aPod.map((item: any, index: any) => (
-            <Accordion key={index + Date.now()} item={item} index={index} />
+            <motion.div
+              key={index}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true }}
+              variants={accordionVariants}
+            >
+              <Accordion key={index + Date.now()} item={item} index={index} />
+            </motion.div>
           ))}
         </div>
       ) : (
