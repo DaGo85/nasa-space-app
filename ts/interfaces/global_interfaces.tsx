@@ -48,3 +48,8 @@ export interface InfoModalI {
   showModal: boolean;
   setShowModal: (arg0: boolean) => void;
 }
+export interface UniverseButtonI {
+  setter: () => void;
+  text: string;
+  icon: { New: Element };
+}
