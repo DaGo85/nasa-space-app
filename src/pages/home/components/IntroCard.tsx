@@ -1,8 +1,8 @@
 import background from "../../../assets/math.jpg";
 
-function IntroCard() {
+function IntroCard({ number, text, button }: any) {
   return (
-    <div className="z-30 relative items-center justify-center w-2/3 h-full overflow-auto">
+    <div className="z-30 relative items-center justify-center w-2/3  overflow-auto rounded dark:shadow-darkOutline shadow-lightOutline shadow-2xl">
       <div
         className="inset-0 h-screen bg-cover bg-center"
         style={{ backgroundImage: `url(${background})` }}
@@ -21,7 +21,7 @@ function IntroCard() {
                 </p>
               </div>
               <div className="underline text-primaryLightOn dark:text-primaryDarkOn font-semibold text-xl mb-4">
-                Number 1
+                {number}
               </div>
               <div className="absolute border-lightOutline dark:border-darkOutline border-t-4 bottom-0 py-1 px-4 w-4/5"></div>
             </div>
@@ -29,8 +29,7 @@ function IntroCard() {
               <div className="relative bg-secondaryLight dark:bg-secondaryDark h-full md:h-96 w-full bg-opacity-50 dark:bg-opacity-50 rounded-tr-lg rounded-br-lg">
                 <div className="p-8">
                   <p className="text-primaryLightOn dark:text-primaryDarkOn text-xs md:text-sm lg:text-xl mb-4">
-                    This is a temporary placeholder, please wait for a
-                    replacement!
+                    {text}
                   </p>
                   <div className="bottom-0 absolute p-2 right-0">
                     <button
@@ -52,7 +51,7 @@ function IntroCard() {
                           d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
                         />
                       </svg>
-                      <span>Next</span>
+                      <span>{button}</span>
                     </button>
                   </div>
                 </div>

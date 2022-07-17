@@ -1,5 +1,16 @@
 {
-  "h1-home": "Willkommen auf meiner Seite!",
+  "card-1-number": "Nummer 1",
+  "card-1-text": "Dies ist ein Platzhalter! Willkommen auf meiner Page!",
+  "card-1-button": "Weiter",
+
+  "card-2-number": "Nummer 2",
+  "card-2-text": "Dies ist ein Platzhalter! Willkommen auf meiner Page!",
+  "card-2-button": "Weiter",
+
+  "card-3-number": "Nummer 3",
+  "card-3-text": "Dies ist ein Platzhalter! Willkommen auf meiner Page!",
+  "card-3-button": "Weiter",
+
   "p-1-home": "Bitte bleib eine Weile",
   "p-2-home": "und",
   "p-3-home": "genieße den Inhalt!"
