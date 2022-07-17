@@ -38,7 +38,7 @@ function Footer() {
             animate={{ height: 100 }}
             transition={{ duration: 1, ease: "easeIn" }}
             exit={{ height: 0 }}
-            className="w-full h-24 bg-lightVariantSurface/75 dark:bg-darkVariantSurface/75
+            className="z-50 w-full h-24 bg-lightVariantSurface/75 dark:bg-darkVariantSurface/75
          flex-col items-center justify-center bottom-0 gap-2 fixed flex"
           >
             <h5 className="text-md">
