@@ -53,9 +53,8 @@ function APOD() {
 
   return (
     <>
-      <h1 className="">{t("apod-test")}</h1>
-      <h2>Astronomic Picture of the day</h2>
-
+      <h1 className="">{t("apod-h1")}</h1>
+      <h2>{t("apod-h2-subtitle")}</h2>
       <ButtonBackgroundCard>
         <UniverseButton
           icon="New"
@@ -71,7 +70,8 @@ function APOD() {
       <InfoModal
         showModal={showModal}
         setShowModal={setShowModal}
-        text={t("modal")}
+        text={t("apod-modal")}
+        buttontext={t("apod-modal-button")}
       />
       {aPod ? (
         <div className="flex flex-col gap-8 w-11/12">

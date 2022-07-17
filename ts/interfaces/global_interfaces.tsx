@@ -47,6 +47,7 @@ export interface InfoModalI {
   text: string;
   showModal: boolean;
   setShowModal: (arg0: boolean) => void;
+  buttontext: string;
 }
 export interface UniverseButtonI {
   setter: () => void;

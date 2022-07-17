@@ -1,6 +1,8 @@
 {
   "apod-button-new": "New",
   "apod-button-Info": "Info",
-  "apod-test": "hello test",
-  "modal": "hello dies ist"
+  "apod-h1": "APOD",
+  "apod-h2-subtitle": "Astronomic Picture of the Day",
+  "apod-modal": "This page shows 5 random astronomic pictures of the day. This pictures can be changed.",
+  "apod-modal-button": "Continue to APOD!"
 }

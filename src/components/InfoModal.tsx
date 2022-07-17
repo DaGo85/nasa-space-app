@@ -1,7 +1,7 @@
 import { InfoModalI } from "../../ts/interfaces/global_interfaces";
 import { AnimatePresence, motion } from "framer-motion";
 
-function InfoModal({ text, showModal, setShowModal }: InfoModalI) {
+function InfoModal({ text, showModal, setShowModal, buttontext }: InfoModalI) {
   return (
     <AnimatePresence>
       {showModal && (
@@ -56,7 +56,7 @@ function InfoModal({ text, showModal, setShowModal }: InfoModalI) {
                   type="button"
                   className="text-tertiaryLight dark:text-tertiaryOn bg-transparent hover:bg-lightOutline hover:text-tertiaryLightContainerOn dark:hover:bg-darkOutline dark:hover:text-tertiaryDarkContainerOn focus:ring-4 focus:outline-none focus:ring-lightVariantSurfaceOn dark:focus:ring-darkVariantSurfaceOn rounded border border-gray-200 text-sm font-medium px-5 py-2.56 focus:z-10"
                 >
-                  Weiter zum APOD
+                  {buttontext}
                 </button>
               </div>
             </div>
