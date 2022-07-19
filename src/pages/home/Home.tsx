@@ -22,6 +22,8 @@ function Home() {
         text={t("card-1-text")}
         button={t("card-1-button")}
         background={cardOne}
+        link="card2"
+        idKey="card1"
       />
       <HRIcon
         path={
@@ -34,6 +36,8 @@ function Home() {
         text={t("card-2-text")}
         button={t("card-2-button")}
         background={cardTwo}
+        link="card3"
+        idKey="card2"
       />
       <HRIcon
         path={
@@ -46,6 +50,7 @@ function Home() {
         text={t("card-3-text")}
         button={t("card-3-button")}
         background={cardThree}
+        idKey="card3"
       />
       <HRIcon
         path={

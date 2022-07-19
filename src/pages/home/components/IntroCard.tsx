@@ -1,11 +1,14 @@
-function IntroCard({ number, text, button, background }: any) {
+function IntroCard({ number, text, button, background, link, idKey }: any) {
   return (
-    <div className="z-30 relative items-center justify-center w-2/3  overflow-auto rounded dark:shadow-darkOutline shadow-lightOutline shadow-2xl">
+    <div
+      id={idKey}
+      className="h-[80vh] z-30 relative items-center justify-center w-2/3  overflow-auto rounded dark:shadow-darkOutline shadow-lightOutline shadow-2xl"
+    >
       <div
-        className="inset-0 h-screen bg-cover bg-center"
+        className="inset-0 h-full bg-cover bg-center"
         style={{ backgroundImage: `url(${background})` }}
       ></div>
-      <div className="absolute inset-0 z-20 flex items-center justify-center h-screen w-full bg-primaryLight dark:bg-primaryDark bg-opacity-50 dark:bg-opacity-20"></div>
+      <div className="absolute inset-0 z-20 flex items-center justify-center h-full w-full bg-primaryLight dark:bg-primaryDark bg-opacity-50 dark:bg-opacity-20"></div>
       <div className="absolute inset-0  z-30  flex flex-col items-center justify-center">
         <div
           className="shadow-2xl rounded-lg w-4/5 h-96 bg-cover bg-center"
@@ -30,27 +33,30 @@ function IntroCard({ number, text, button, background }: any) {
                     {text}
                   </p>
                   <div className="bottom-0 absolute p-2 right-0">
-                    <button
-                      className="opacity-75 bg-primaryLight dark:bg-primaryDark hover:bg-primaryLight/60
+                    {link && (
+                      <a
+                        href={"#" + link}
+                        className="opacity-75 bg-primaryLight dark:bg-primaryDark hover:bg-primaryLight/60
                     dark:hover:bg-primaryDark/60 border-primaryLightOn dark:border-primaryDarkOn
                     hover:border-primaryDarkOn dark:hover:border-primaryLightOn text-sm font-bold py-2 px-4 rounded inline-flex items-center"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      <span>{button}</span>
-                    </button>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 mr-2"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span>{button}</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
