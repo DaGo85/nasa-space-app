@@ -1,4 +1,4 @@
-import background from "../../../assets/math.jpg";
+import background from "../../../assets/mountain.jpg";
 
 function IntroCard({ number, text, button }: any) {
   return (
@@ -7,7 +7,7 @@ function IntroCard({ number, text, button }: any) {
         className="inset-0 h-screen bg-cover bg-center"
         style={{ backgroundImage: `url(${background})` }}
       ></div>
-      <div className="absolute inset-0 z-20 flex items-center justify-center h-screen w-full bg-primaryLight dark:bg-primaryDark bg-opacity-75 dark:bg-opacity-75"></div>
+      <div className="absolute inset-0 z-20 flex items-center justify-center h-screen w-full bg-primaryLight dark:bg-primaryDark bg-opacity-50 dark:bg-opacity-20"></div>
       <div className="absolute inset-0  z-30  flex flex-col items-center justify-center">
         <div
           className="shadow-2xl rounded-lg w-4/5 h-96 bg-cover bg-center"

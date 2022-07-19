@@ -31,7 +31,7 @@ function APOD() {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const { t } = useTranslation("apod");
-
+  console.group(aPod);
   useEffect(() => {
     const getApod = async () => {
       const res: any = await axios.get(
