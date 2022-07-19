@@ -5,6 +5,7 @@ import IntroCard from "./components/IntroCard";
 import cardOne from "../../assets/mountain.jpg";
 import cardTwo from "../../assets/sky.jpg";
 import cardThree from "../../assets/water.jpg";
+import DividerButton from "../../components/DividerButton";
 
 function Home() {
   const { t } = useTranslation("home");
@@ -58,6 +59,8 @@ function Home() {
         }
         view="0 0 512 512"
       />
+      <DividerButton />
+      <DividerButton />
     </>
   );
 }

@@ -13,8 +13,7 @@ function NavBarLangDropDown() {
         <div className="group inline-block relative transition-all duration-500">
           <button
             type="button"
-            className=" 
-           font-semibold rounded inline-flex justify-center items-center w-24 p-0 "
+            className="font-semibold rounded inline-flex justify-center items-center w-24 p-0 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
