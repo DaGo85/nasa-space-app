@@ -1,6 +1,4 @@
-import background from "../../../assets/mountain.jpg";
-
-function IntroCard({ number, text, button }: any) {
+function IntroCard({ number, text, button, background }: any) {
   return (
     <div className="z-30 relative items-center justify-center w-2/3  overflow-auto rounded dark:shadow-darkOutline shadow-lightOutline shadow-2xl">
       <div
@@ -45,9 +43,9 @@ function IntroCard({ number, text, button }: any) {
                         stroke="currentColor"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
                         />
                       </svg>

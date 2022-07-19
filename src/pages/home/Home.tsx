@@ -2,6 +2,10 @@ import { useTranslation } from "react-i18next";
 import HRIcon from "../../components/HRIcon";
 import IntroCard from "./components/IntroCard";
 
+import cardOne from "../../assets/mountain.jpg";
+import cardTwo from "../../assets/sky.jpg";
+import cardThree from "../../assets/water.jpg";
+
 function Home() {
   const { t } = useTranslation("home");
 
@@ -17,6 +21,7 @@ function Home() {
         number={t("card-1-number")}
         text={t("card-1-text")}
         button={t("card-1-button")}
+        background={cardOne}
       />
       <HRIcon
         path={
@@ -28,6 +33,7 @@ function Home() {
         number={t("card-2-number")}
         text={t("card-2-text")}
         button={t("card-2-button")}
+        background={cardTwo}
       />
       <HRIcon
         path={
@@ -39,6 +45,7 @@ function Home() {
         number={t("card-3-number")}
         text={t("card-3-text")}
         button={t("card-3-button")}
+        background={cardThree}
       />
       <HRIcon
         path={
