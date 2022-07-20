@@ -13,7 +13,7 @@ function NavBarSocialIcons() {
                 viewBox={icon.viewBox}
               >
                 <g
-                  className="hover:fill-primaryLightOn dark:hover:fill-primaryDarkOn"
+                  className="hover:fill-primaryLightOn dark:hover:fill-primaryDarkOn fill-lightVariantSurfaceOn dark:fill-darkVariantSurfaceOn"
                   fill="#70787c"
                 >
                   <path d={icon.svg} />

@@ -14,8 +14,8 @@ function NavBar() {
   };
 
   return (
-    <header>
-      <nav className="z-50 w-full fixed grid grid-row-8 justify-center items-center bg-lightVariantSurface/75 dark:bg-darkVariantSurface/75">
+    <header className="relative">
+      <nav className="z-50 absolute inset-0 w-full grid grid-row-8 justify-center h-min items-center bg-lightVariantSurface/75 dark:bg-darkVariantSurface/75">
         <span className=" gap-1 grid row-span-4 grid-cols-12 w-full justify-center items-center py-2">
           <NavBarLogo />
           <NavBarSocialIcons />
