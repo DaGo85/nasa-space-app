@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function DividerButton({ link, name }: any) {
   return (
-    <Link to={link} className="flex items-center my-4 w-2/3">
+    <Link to={link} className="flex items-center my-2 w-2/3">
       <span
         aria-hidden="true"
         className="flex-grow bg-lightOutline dark:bg-darkOutline rounded h-[3px]"

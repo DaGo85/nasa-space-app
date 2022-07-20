@@ -59,7 +59,13 @@ function Home() {
         }
         view="0 0 512 512"
       />
+      <h2 className="font-extrabold text-3xl text-primaryLightOn shadow-2xl">
+        {t("home-link-h2")}
+      </h2>
       <DividerButton name="APOD" link="/apod" />
+      <h3 className="font-bold text-2xl text-primaryLightOn shadow-2xl">
+        {t("home-link-h3")}
+      </h3>
       <DividerButton name="Impressum" link="/impressum" />
     </>
   );
