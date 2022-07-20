@@ -59,8 +59,8 @@ function Home() {
         }
         view="0 0 512 512"
       />
-      <DividerButton />
-      <DividerButton />
+      <DividerButton name="APOD" link="/apod" />
+      <DividerButton name="Impressum" link="/impressum" />
     </>
   );
 }

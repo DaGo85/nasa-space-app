@@ -1,6 +1,8 @@
-function DividerButton() {
+import { Link } from "react-router-dom";
+
+function DividerButton({ link, name }: any) {
   return (
-    <div className="flex items-center my-4 w-2/3">
+    <Link to={link} className="flex items-center my-4 w-2/3">
       <span
         aria-hidden="true"
         className="flex-grow bg-lightOutline dark:bg-darkOutline rounded h-[3px]"
@@ -11,13 +13,13 @@ function DividerButton() {
           border border-lightOutline dark:border-darkOutline rounded-md shadow-sm hover:bg-primaryLightOn
           dark:hover:bg-primaryDarkOn focus:outline-black"
       >
-        Click me
+        {name}
       </button>
       <span
         aria-hidden="true"
         className="flex-grow bg-lightOutline dark:bg-darkOutline rounded  h-[3px]"
       ></span>
-    </div>
+    </Link>
   );
 }
 export default DividerButton;
