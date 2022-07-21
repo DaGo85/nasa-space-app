@@ -8,7 +8,7 @@ export const NavBarLinkItems = [
     link: "/APOD",
     label: "link to APOD(Astronomic picture of the day)",
   },
-  { name: "test2", link: "/test2", label: "link to test2" },
+  { name: "Features", link: "/features", label: "link to Features" },
 ];
 
 export const socialIconsList: SocialIconsI[] = [
