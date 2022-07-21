@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import HRIcon from "../../components/HRIcon";
+import FeaturesCard from "./components/FeaturesCard";
 
 function Features() {
   const { t } = useTranslation("features");
@@ -14,6 +15,7 @@ function Features() {
       <h1 className="font-extrabold text-3xl text-primaryLightOn shadow-2xl">
         {t("features-title")}
       </h1>
+      <FeaturesCard />
     </>
   );
 }
