@@ -31,11 +31,11 @@ function APOD() {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const { t } = useTranslation("apod");
-  console.group(aPod);
+
   useEffect(() => {
     const getApod = async () => {
       const res: any = await axios.get(
-        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APOD_API_KEY}&count=5`
+        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_MY_API_KEY}&count=5`
       );
       setApod(res.data);
     };
