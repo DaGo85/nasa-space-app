@@ -1,12 +1,12 @@
 {
   "features-card": [
     {
-      "featurescard-title-1": "Meteor",
-      "featurescard-subtitle-1": "Die ist ein Platzhalter"
+      "featurescard-title": "Meteor",
+      "featurescard-subtitle": "Die ist ein Platzhalter"
     },
     {
-      "featurescard-title-2": "Meteor",
-      "featurescard-subtitle-2": "Die ist ein Platzhalter"
+      "featurescard-title": "Meteor2",
+      "featurescard-subtitle": "Die ist ein Platzhalter"
     }
   ]
 }

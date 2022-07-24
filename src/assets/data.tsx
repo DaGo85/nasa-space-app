@@ -32,7 +32,7 @@ export const socialIconsList: SocialIconsI[] = [
   },
 ];
 
-export const featurescontent = [
+export const featureContent = [
   {
     id: 1,
     url: "/asteroids",

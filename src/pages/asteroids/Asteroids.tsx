@@ -1,8 +1,24 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import HRIcon from "../../components/HRIcon";
 
 function Asteroids() {
+  const [asteroids, setAsteroids] = useState<any>(null);
+  const [getNewAsteroids, setGetNewAsteroids] = useState<any>(false);
   const { t } = useTranslation("asteroids");
+  useEffect(() => {
+    const getAsteroids = async () => {
+      const res: any = await axios.get(
+        `https://api.nasa.gov/neo/rest/v1/feed?start_date=START_DATE&end_date=END_DATE&api_key=${process.env.REACT_APP_APOD_API_KEY}&count=5`
+      );
+      setAsteroids(res.data);
+    };
+
+    getAsteroids();
+    console.log("test" + JSON.stringify(setAsteroids));
+  }, [getNewAsteroids]);
+
   return (
     <>
       <HRIcon
