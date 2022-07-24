@@ -4,15 +4,22 @@ import { useTranslation } from "react-i18next";
 import HRIcon from "../../components/HRIcon";
 
 function Asteroids() {
-  const [asteroids, setAsteroids] = useState<any>({});
+  const [asteroids, setAsteroids] = useState<any>(null);
   const [getNewAsteroids, setGetNewAsteroids] = useState<any>(false);
 
   const { t } = useTranslation("asteroids");
 
   useEffect(() => {
     const getAsteroids = async () => {
+      let today = new Date().toISOString().slice(0, 10);
+      console.log(today);
+      const date = new Date();
+      date.setDate(date.getDate() + 7);
+      let dateSeven = date.toISOString().slice(0, 10);
+      console.log(dateSeven);
+
       const res: any = await axios.get(
-        `https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=${process.env.REACT_APP_MY_API_KEY}`
+        `https://api.nasa.gov/neo/rest/v1/feed?start_date=${today}&end_date=${dateSeven}&api_key=${process.env.REACT_APP_MY_API_KEY}`
       );
       setAsteroids(res.data);
     };
@@ -32,6 +39,11 @@ function Asteroids() {
       <h1 className="font-extrabold text-3xl text-primaryLightOn shadow-2xl">
         {t("test")}
       </h1>
+      {asteroids ? (
+        <div>asteroids are close</div>
+      ) : (
+        <div>asteroids are far</div>
+      )}
     </>
   );
 }
