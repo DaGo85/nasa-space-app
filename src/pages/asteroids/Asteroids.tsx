@@ -1,23 +1,37 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import GenericCard from "../../components/GenericCard";
 import HRIcon from "../../components/HRIcon";
+import InfoModal from "../../components/InfoModal";
+import UniverseButton from "../../components/UniverseButton";
 
 function Asteroids() {
   const [asteroids, setAsteroids] = useState<any>(null);
   const [getNewAsteroids, setGetNewAsteroids] = useState<any>(false);
   const [days, setDays] = useState<number>(0);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const { t } = useTranslation("asteroids");
 
-  const handletwo = () => {
+  const handleTwo = () => {
     setDays(1);
   };
-  const handlethree = () => {
+  const handleThree = () => {
     setDays(2);
   };
-  const handleseven = () => {
+  const handleSeven = () => {
     setDays(6);
+  };
+  const handleTen = () => {
+    setDays(9);
+  };
+  const handleThirty = () => {
+    setDays(29);
+  };
+
+  const handleGetInfo = () => {
+    setShowModal(true);
   };
 
   useEffect(() => {
@@ -47,12 +61,33 @@ function Asteroids() {
         }
         view="0 0 512 512"
       />
-      <h1 className="font-extrabold text-3xl text-primaryLightOn shadow-2xl">
-        {t("test")}
+      <h1 className="font-extrabold text-3xl text-primaryLightOn dark:text-primaryDarkOn shadow-2xl">
+        {t("asteroids-h1")}
       </h1>
-      <button onClick={handletwo}>2</button>
-      <button onClick={handlethree}>3</button>
-      <button onClick={handleseven}>7</button>
+      <UniverseButton
+        icon="Info"
+        setter={handleGetInfo}
+        text={t("apod-button-Info")}
+      />
+      <InfoModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        text={t("asteroids-modal")}
+        buttontext={t("asteroids-modal-button")}
+      />
+      <GenericCard added="mt-40">
+        <h3>{t("h3-asteroids-incoming")}</h3>
+        <h4>{t("h4-asteroids-incoming")}</h4>
+        <h5>{t("h5-asteroids-incoming")}</h5>
+        <div className="flex flex-row items-between justify-between">
+          <button onClick={handleTwo}>2</button>
+          <button onClick={handleThree}>3</button>
+          <button onClick={handleSeven}>7</button>
+          <button onClick={handleTen}>10</button>
+          <button onClick={handleThirty}>30</button>
+        </div>
+      </GenericCard>
+
       {asteroids ? (
         <div>asteroids are close</div>
       ) : (

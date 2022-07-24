@@ -1,1 +1,8 @@
-{ "test": "test", "test1": "test1" }
+{
+  "asteroids-h1": "Everything about Asteroids!",
+  "asteroids-modal": "Asteroids are everywhere in our solar system. With the help of this app it is easy to track them and see if there is a danger from these asteroids. Press one of the buttons to display the celestial bodies that could be dangerous for the earth!",
+  "asteroids-modal-button": "Onward!",
+  "h3-asteroids-incoming": "Dangerously close asteroids",
+  "h4-asteroids-incoming": "Click on the button for more information",
+  "h5-asteroids-incoming": "Data in days!"
+}
