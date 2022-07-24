@@ -33,6 +33,7 @@ export interface CustomLinkI {
 export interface GenericCardI {
   children: JSX.Element | JSX.Element[];
   added: string;
+  height: string;
 }
 
 export interface NavBarLinksI {
