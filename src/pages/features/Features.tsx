@@ -1,9 +1,18 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import HRIcon from "../../components/HRIcon";
+import InfoModal from "../../components/InfoModal";
+import UniverseButton from "../../components/UniverseButton";
 import FeaturesCard from "./components/FeaturesCard";
 
 function Features() {
+  const [showModal, setShowModal] = useState<boolean>(false);
   const { t } = useTranslation("features");
+
+  const handleGetInfo = () => {
+    setShowModal(true);
+  };
+
   return (
     <>
       <HRIcon
@@ -15,6 +24,17 @@ function Features() {
       <h1 className="font-extrabold text-3xl text-primaryLightOn shadow-2xl">
         {t("features-title")}
       </h1>
+      <UniverseButton
+        icon="Info"
+        setter={handleGetInfo}
+        text={t("features-button-Info")}
+      />
+      <InfoModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        text={t("features-modal")}
+        buttontext={t("features-modal-button")}
+      />
       <FeaturesCard />
     </>
   );

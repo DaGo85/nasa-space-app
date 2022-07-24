@@ -4,12 +4,10 @@ import { featureContent } from "../../../assets/data";
 
 function FeaturesCard() {
   const { t } = useTranslation("featurescard");
-  console.log("features" + t("features-card"));
   return (
     <div className="flex flex-col md:flex-row gap-4 md:px-4 mt-6 dark:shadow-darkOutline shadow-lightOutline shadow-2xl">
       {/* @ts-ignore */}
       {t("features-card", { returnObjects: true }).map((text, index) => {
-        console.log(JSON.stringify(text));
         return (
           <Link
             to={featureContent[index].url}
