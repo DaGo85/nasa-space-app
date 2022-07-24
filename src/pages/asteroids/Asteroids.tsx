@@ -6,15 +6,26 @@ import HRIcon from "../../components/HRIcon";
 function Asteroids() {
   const [asteroids, setAsteroids] = useState<any>(null);
   const [getNewAsteroids, setGetNewAsteroids] = useState<any>(false);
+  const [days, setDays] = useState<number>(0);
 
   const { t } = useTranslation("asteroids");
+
+  const handletwo = () => {
+    setDays(1);
+  };
+  const handlethree = () => {
+    setDays(2);
+  };
+  const handleseven = () => {
+    setDays(6);
+  };
 
   useEffect(() => {
     const getAsteroids = async () => {
       let today = new Date().toISOString().slice(0, 10);
       console.log(today);
       const date = new Date();
-      date.setDate(date.getDate() + 7);
+      date.setDate(date.getDate() + days);
       let dateSeven = date.toISOString().slice(0, 10);
       console.log(dateSeven);
 
@@ -26,7 +37,7 @@ function Asteroids() {
     console.log("Asteroids123" + JSON.stringify(asteroids));
 
     getAsteroids();
-  }, []);
+  }, [days]);
 
   return (
     <>
@@ -39,6 +50,9 @@ function Asteroids() {
       <h1 className="font-extrabold text-3xl text-primaryLightOn shadow-2xl">
         {t("test")}
       </h1>
+      <button onClick={handletwo}>2</button>
+      <button onClick={handlethree}>3</button>
+      <button onClick={handleseven}>7</button>
       {asteroids ? (
         <div>asteroids are close</div>
       ) : (
