@@ -5,6 +5,7 @@ import GenericCard from "../../components/GenericCard";
 import HRIcon from "../../components/HRIcon";
 import InfoModal from "../../components/InfoModal";
 import Statistics from "../../components/Statistics";
+import ToolBar from "../../components/ToolBar";
 import UniverseButton from "../../components/UniverseButton";
 
 function Asteroids() {
@@ -80,48 +81,13 @@ function Asteroids() {
         <h3>{t("h3-asteroids-incoming")}</h3>
         <h4>{t("h4-asteroids-incoming")}</h4>
         <h5>{t("h5-asteroids-incoming")}</h5>
-        <div className="flex flex-row items-between justify-between">
-          <div className="flex items-center justify-center">
-            <div
-              className="inline-flex shadow-md hover:shadow-lg focus:shadow-lg"
-              role="toolbar"
-            >
-              <button className="rounded-l inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out">
-                1
-              </button>
-              <button
-                onClick={handleTwo}
-                className=" inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
-              >
-                2
-              </button>
-              <button
-                onClick={handleThree}
-                className=" inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
-              >
-                3
-              </button>
-              <button
-                onClick={handleSeven}
-                className=" inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
-              >
-                7
-              </button>
-              <button
-                onClick={handleTen}
-                className=" inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
-              >
-                10
-              </button>
-              <button
-                onClick={handleThirty}
-                className=" rounded-r inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
-              >
-                30
-              </button>
-            </div>
-          </div>
-        </div>
+        <ToolBar
+          handleTwo={handleTwo}
+          handleThree={handleThree}
+          handleSeven={handleSeven}
+          handleTen={handleTen}
+          handleThirty={handleThirty}
+        />
       </GenericCard>
       <GenericCard added="mt-10" height="h-[500px]">
         <Statistics />
