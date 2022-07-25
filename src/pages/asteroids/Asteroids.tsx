@@ -7,6 +7,7 @@ import InfoModal from "../../components/InfoModal";
 import Statistics from "../../components/Statistics";
 import ToolBar from "../../components/ToolBar";
 import UniverseButton from "../../components/UniverseButton";
+import getCalculations from "../../utility/getCalculations";
 
 function Asteroids() {
   const [asteroids, setAsteroids] = useState<any>(null);
@@ -37,6 +38,7 @@ function Asteroids() {
         `https://api.nasa.gov/neo/rest/v1/feed?start_date=${today}&end_date=${dateEnd}&api_key=${process.env.REACT_APP_MY_API_KEY}`
       );
       setAsteroids(res.data);
+      console.log("calc" + JSON.stringify(getCalculations(res.data)));
     };
     console.log("Asteroids123" + JSON.stringify(asteroids));
 

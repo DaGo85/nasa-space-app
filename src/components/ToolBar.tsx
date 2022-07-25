@@ -25,22 +25,28 @@ function ToolBar({ handleDate }: any) {
             3
           </button>
           <button
+            onClick={() => handleDate(3)}
+            className=" inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
+          >
+            4
+          </button>
+          <button
+            onClick={() => handleDate(4)}
+            className=" inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
+          >
+            5
+          </button>
+          <button
+            onClick={() => handleDate(5)}
+            className=" inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
+          >
+            6
+          </button>
+          <button
             onClick={() => handleDate(6)}
-            className=" inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
-          >
-            7
-          </button>
-          <button
-            onClick={() => handleDate(9)}
-            className=" inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
-          >
-            10
-          </button>
-          <button
-            onClick={() => handleDate(29)}
             className=" rounded-r inline-block px-6 py-2.5 bg-secondaryLightContainer dark:bg-tertiary text-secondaryLightContainerOn dark:text-tertiaryOn font-medium text-xs leading-tight uppercase hover:bg-lightOutline dark:hover:bg-darkOutline focus:bg-lightOutline dark:focus:bg-darkOutline focus:outline-none focus:ring-0 active:bg-backgroundLight dark:active:bg-backgroundDark transition duration-150 ease-in-out"
           >
-            30
+            7
           </button>
         </div>
       </div>
