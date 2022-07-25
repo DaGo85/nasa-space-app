@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import GenericCard from "../../components/GenericCard";
 import HRIcon from "../../components/HRIcon";
 import InfoModal from "../../components/InfoModal";
+import Statistics from "../../components/Statistics";
 import UniverseButton from "../../components/UniverseButton";
 
 function Asteroids() {
@@ -75,7 +76,7 @@ function Asteroids() {
         text={t("asteroids-modal")}
         buttontext={t("asteroids-modal-button")}
       />
-      <GenericCard added="mt-40" height="h-[300px]">
+      <GenericCard added="mt-10" height="h-[300px]">
         <h3>{t("h3-asteroids-incoming")}</h3>
         <h4>{t("h4-asteroids-incoming")}</h4>
         <h5>{t("h5-asteroids-incoming")}</h5>
@@ -121,6 +122,9 @@ function Asteroids() {
             </div>
           </div>
         </div>
+      </GenericCard>
+      <GenericCard added="mt-10" height="h-[500px]">
+        <Statistics />
       </GenericCard>
 
       {asteroids ? (

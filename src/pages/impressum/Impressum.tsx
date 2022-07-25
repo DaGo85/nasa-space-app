@@ -5,7 +5,7 @@ function Impressum() {
   const { t } = useTranslation("impressum");
   return (
     <>
-      <GenericCard added="mt-10" height="h-[500px]">
+      <GenericCard added="mt-40" height="h-[500px]">
         <h4>{t("h1-impressum")}</h4>
         <span className="flex flex-col gap-2 w-full px-6">
           <h5>Gemäß zu § 5 TMG:</h5>
