@@ -16,20 +16,8 @@ function Asteroids() {
 
   const { t } = useTranslation("asteroids");
 
-  const handleTwo = () => {
-    setDays(1);
-  };
-  const handleThree = () => {
-    setDays(2);
-  };
-  const handleSeven = () => {
-    setDays(6);
-  };
-  const handleTen = () => {
-    setDays(9);
-  };
-  const handleThirty = () => {
-    setDays(29);
+  const handleDate = (d: number) => {
+    setDays(d);
   };
 
   const handleGetInfo = () => {
@@ -38,15 +26,15 @@ function Asteroids() {
 
   useEffect(() => {
     const getAsteroids = async () => {
-      let today = new Date().toISOString().slice(0, 10);
+      const today = new Date().toISOString().slice(0, 10);
       console.log(today);
       const date = new Date();
       date.setDate(date.getDate() + days);
-      let dateSeven = date.toISOString().slice(0, 10);
-      console.log(dateSeven);
+      const dateEnd = date.toISOString().slice(0, 10);
+      console.log(dateEnd);
 
       const res: any = await axios.get(
-        `https://api.nasa.gov/neo/rest/v1/feed?start_date=${today}&end_date=${dateSeven}&api_key=${process.env.REACT_APP_MY_API_KEY}`
+        `https://api.nasa.gov/neo/rest/v1/feed?start_date=${today}&end_date=${dateEnd}&api_key=${process.env.REACT_APP_MY_API_KEY}`
       );
       setAsteroids(res.data);
     };
@@ -81,13 +69,7 @@ function Asteroids() {
         <h3>{t("h3-asteroids-incoming")}</h3>
         <h4>{t("h4-asteroids-incoming")}</h4>
         <h5>{t("h5-asteroids-incoming")}</h5>
-        <ToolBar
-          handleTwo={handleTwo}
-          handleThree={handleThree}
-          handleSeven={handleSeven}
-          handleTen={handleTen}
-          handleThirty={handleThirty}
-        />
+        <ToolBar handleDate={handleDate} />
       </GenericCard>
       <GenericCard added="mt-10" height="h-[500px]">
         <Statistics />

@@ -16,7 +16,7 @@ function Statistics() {
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
                 120
               </h2>
-              <p className="leading-relaxed text-primaryLightOn dark:text-primaryDarkOn font-bold">
+              <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
                 test1
               </p>
             </div>
@@ -26,7 +26,7 @@ function Statistics() {
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
                 120
               </h2>
-              <p className="leading-relaxed text-primaryLightOn dark:text-primaryDarkOn font-bold">
+              <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
                 test3
               </p>
             </div>
@@ -36,7 +36,7 @@ function Statistics() {
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
                 120
               </h2>
-              <p className="leading-relaxed text-primaryLightOn dark:text-primaryDarkOn font-bold">
+              <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
                 test4
               </p>
             </div>
@@ -46,7 +46,7 @@ function Statistics() {
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
                 120
               </h2>
-              <p className="leading-relaxed text-primaryLightOn dark:text-primaryDarkOn font-bold">
+              <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
                 test5
               </p>
             </div>
