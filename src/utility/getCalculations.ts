@@ -5,14 +5,28 @@ const getCalculations = (asteroidData: any) => {
     dangerousAsteroids: 0,
     harmlessAsteroids: 0,
     asteroidsTotal: asteroidData["element_count"],
-    nearestAsteroid: 0,
+    nearestAsteroid: Number.MAX_VALUE,
   };
-  console.log(JSON.stringify(asteroidData));
 
-  keys.map((day) => {
-    asteroidData["near_earth_objects"][day].map((asteroid: any) => {
+  keys.forEach((day) => {
+    asteroidData["near_earth_objects"][day].forEach((asteroid: any) => {
       if (asteroid["is_potentially_hazardous_asteroid"] === true)
         fad.dangerousAsteroids++;
+    });
+  });
+
+  keys.forEach((day) => {
+    asteroidData["near_earth_objects"][day].forEach((asteroid: any) => {
+      if (
+        parseInt(
+          asteroid["close_approach_data"][0]["miss_distance"]["kilometers"],
+          10
+        ) <= fad.nearestAsteroid
+      )
+        fad.nearestAsteroid = parseInt(
+          asteroid["close_approach_data"][0]["miss_distance"]["kilometers"],
+          10
+        );
     });
   });
 

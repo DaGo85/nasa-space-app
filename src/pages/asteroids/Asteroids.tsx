@@ -38,8 +38,7 @@ function Asteroids() {
       const res: any = await axios.get(
         `https://api.nasa.gov/neo/rest/v1/feed?start_date=${today}&end_date=${dateEnd}&api_key=${process.env.REACT_APP_MY_API_KEY}`
       );
-      setAsteroids(res.data);
-      console.log("calc" + JSON.stringify(getCalculations(res.data)));
+      setAsteroids(getCalculations(res.data));
     };
     console.log("Asteroids123" + JSON.stringify(asteroids));
 
@@ -75,7 +74,7 @@ function Asteroids() {
         <ToolBar handleDate={handleDate} />
       </GenericCard>
       <GenericCard added="mt-10" height="h-[500px]">
-        {!asteroids ? <Statistics /> : <SkeletonCardStatistic />}
+        {asteroids ? <Statistics /> : <SkeletonCardStatistic />}
       </GenericCard>
     </>
   );
