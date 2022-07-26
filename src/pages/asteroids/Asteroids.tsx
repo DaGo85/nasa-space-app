@@ -74,7 +74,16 @@ function Asteroids() {
         <ToolBar handleDate={handleDate} />
       </GenericCard>
       <GenericCard added="mt-10" height="h-[500px]">
-        {asteroids ? <Statistics /> : <SkeletonCardStatistic />}
+        {asteroids ? (
+          <Statistics
+            asteroidsTotal={asteroids.asteroidsTotal}
+            nearestAsteroid={asteroids.nearestAsteroid}
+            harmlessAsteroids={asteroids.harmlessAsteroids}
+            dangerousAsteroids={asteroids.dangerousAsteroids}
+          />
+        ) : (
+          <SkeletonCardStatistic />
+        )}
       </GenericCard>
     </>
   );

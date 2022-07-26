@@ -1,4 +1,9 @@
-function Statistics() {
+function Statistics({
+  dangerousAsteroids,
+  asteroidsTotal,
+  nearestAsteroid,
+  harmlessAsteroids,
+}: any) {
   return (
     <section className="text-primaryLightOn dark:text-primaryDarkOn body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -14,40 +19,40 @@ function Statistics() {
           <div className="p-4 sm:w-1/4 w-1/2">
             <div className="bg-primaryLight dark:bg-primaryDark rounded-lg p-2 xl:p-6">
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
-                120
+                {asteroidsTotal}
               </h2>
               <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
-                test1
+                Asteroids total:
               </p>
             </div>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <div className="bg-primaryLight dark:bg-primaryDark rounded-lg p-2 xl:p-6">
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
-                120
+                {dangerousAsteroids}
               </h2>
               <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
-                test3
+                Dangerous Asteroids:
               </p>
             </div>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <div className="bg-primaryLight dark:bg-primaryDark rounded-lg p-2 xl:p-6">
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
-                120
+                {harmlessAsteroids}
               </h2>
               <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
-                test4
+                Harmless Asteroids:
               </p>
             </div>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <div className="bg-primaryLight dark:bg-primaryDark rounded-lg p-2 xl:p-6">
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
-                120
+                {nearestAsteroid}
               </h2>
               <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
-                test5
+                Nearest Asteroids:
               </p>
             </div>
           </div>
