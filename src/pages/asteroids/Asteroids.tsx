@@ -9,6 +9,11 @@ import Statistics from "../../components/Statistics";
 import ToolBar from "../../components/ToolBar";
 import UniverseButton from "../../components/UniverseButton";
 import getCalculations from "../../utility/getCalculations";
+import { motion } from "framer-motion";
+import Accordion from "../../components/Accordion";
+import SkeletonCard from "../../components/skeletons/SkeletonCardApod";
+import SkeletonAccordionApod from "../../components/skeletons/SkeletonAccordionApod";
+import { accordionVariants } from "../../utility/motionVariants";
 
 function Asteroids() {
   const [asteroids, setAsteroids] = useState<any>(null);
@@ -85,6 +90,35 @@ function Asteroids() {
           <SkeletonCardStatistic />
         )}
       </GenericCard>
+      {asteroids ? (
+        <div className="flex flex-col gap-8 w-11/12">
+          {asteroids.asteroids.map((item: any, index: any) => (
+            <motion.div
+              key={index}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true }}
+              variants={accordionVariants}
+            >
+              <Accordion
+                key={index + Date.now()}
+                item={{ title: item.name }}
+                index={index}
+              >
+                <div></div>
+              </Accordion>
+            </motion.div>
+          ))}
+        </div>
+      ) : (
+        <div className="flex flex-col gap-8 w-11/12">
+          <SkeletonCard />
+          <SkeletonAccordionApod />
+          <SkeletonAccordionApod />
+          <SkeletonAccordionApod />
+          <SkeletonAccordionApod />
+        </div>
+      )}
     </>
   );
 }

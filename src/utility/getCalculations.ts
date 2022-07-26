@@ -6,7 +6,7 @@ const getCalculations = (asteroidData: any) => {
     harmlessAsteroids: 0,
     asteroidsTotal: asteroidData["element_count"],
     nearestAsteroid: Number.MAX_VALUE,
-    asteroids: asteroidData["near_earth_objects"][keys[0]].slice(0, 4),
+    asteroids: asteroidData["near_earth_objects"][keys[0]].slice(0, 5),
   };
 
   keys.forEach((day) => {

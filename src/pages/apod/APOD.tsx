@@ -9,21 +9,7 @@ import SkeletonCard from "../../components/skeletons/SkeletonCardApod";
 import { motion } from "framer-motion";
 import ButtonBackgroundCard from "../../components/ButtonBackgroundCard";
 import UniverseButton from "../../components/UniverseButton";
-
-const accordionVariants = {
-  offscreen: {
-    y: 100,
-  },
-  onscreen: {
-    y: -10,
-    rotate: 0,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
-    },
-  },
-};
+import { accordionVariants } from "../../utility/motionVariants";
 
 function APOD() {
   const [aPod, setApod] = useState<any>(null);
@@ -83,7 +69,19 @@ function APOD() {
               viewport={{ once: true }}
               variants={accordionVariants}
             >
-              <Accordion key={index + Date.now()} item={item} index={index} />
+              <Accordion key={index + Date.now()} item={item} index={index}>
+                <span className="items-center flex flex-col gap-4">
+                  <hr className="text-primaryLightContainerOn dark:text-secondaryDarkContainerOn w-full" />
+                  {item.copyright ? (
+                    <h4>Author: {item.copyright}</h4>
+                  ) : (
+                    <div></div>
+                  )}
+                  <h4>Date: {item.date}</h4>
+                  <img src={item.url} alt="Astronomic pic of the day" />
+                  <p>{item.explanation}</p>
+                </span>
+              </Accordion>
             </motion.div>
           ))}
         </div>

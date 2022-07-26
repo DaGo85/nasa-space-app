@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Accordion({ item, index }: any) {
+function Accordion({ children, item, index }: any) {
   const [isActive, setIsActive] = useState(index === 0 ? true : false);
   return (
     <div
@@ -14,15 +14,7 @@ function Accordion({ item, index }: any) {
     >
       <div>{item.title}</div>
       <div>{isActive ? "-" : "+"}</div>
-      {isActive && (
-        <span className="items-center flex flex-col gap-4">
-          <hr className="text-primaryLightContainerOn dark:text-secondaryDarkContainerOn w-full" />
-          {item.copyright ? <h4>Author: {item.copyright}</h4> : <div></div>}
-          <h4>Date: {item.date}</h4>
-          <img src={item.url} alt="Astronomic picture of the day" />
-          <p>{item.explanation}</p>
-        </span>
-      )}
+      {isActive && children}
     </div>
   );
 }
