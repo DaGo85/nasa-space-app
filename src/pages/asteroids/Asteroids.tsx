@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import GenericCard from "../../components/GenericCard";
 import HRIcon from "../../components/HRIcon";
 import InfoModal from "../../components/InfoModal";
+import SkeletonCardStatistic from "../../components/skeletons/SkeletonCardStatistic";
 import Statistics from "../../components/Statistics";
 import ToolBar from "../../components/ToolBar";
 import UniverseButton from "../../components/UniverseButton";
@@ -74,14 +75,8 @@ function Asteroids() {
         <ToolBar handleDate={handleDate} />
       </GenericCard>
       <GenericCard added="mt-10" height="h-[500px]">
-        <Statistics />
+        {!asteroids ? <Statistics /> : <SkeletonCardStatistic />}
       </GenericCard>
-
-      {asteroids ? (
-        <div>asteroids are close</div>
-      ) : (
-        <div>asteroids are far</div>
-      )}
     </>
   );
 }

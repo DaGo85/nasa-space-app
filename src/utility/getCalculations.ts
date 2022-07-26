@@ -10,7 +10,7 @@ const getCalculations = (asteroidData: any) => {
   console.log(JSON.stringify(asteroidData));
 
   keys.map((day) => {
-    asteroidData["near_earth_objects"][day].map((asteroid) => {
+    asteroidData["near_earth_objects"][day].map((asteroid: any) => {
       if (asteroid["is_potentially_hazardous_asteroid"] === true)
         fad.dangerousAsteroids++;
     });
