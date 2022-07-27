@@ -4,5 +4,7 @@
   "asteroids-modal-button": "Vorwärts!",
   "h3-asteroids-incoming": "Gefährlich nahe Asteroiden",
   "h4-asteroids-incoming": "Klicke auf den Button für mehr Informationen",
-  "h5-asteroids-incoming": "Angaben in Tagen!"
+  "h5-asteroids-incoming": "Angaben in Tagen!",
+  "statistics-danger-true": "Gefährlich",
+  "statistics-danger-false": "Ungefährlich"
 }

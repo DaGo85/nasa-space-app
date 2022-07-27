@@ -4,5 +4,7 @@
   "asteroids-modal-button": "Onward!",
   "h3-asteroids-incoming": "Dangerously close asteroids",
   "h4-asteroids-incoming": "Click on the button for more information",
-  "h5-asteroids-incoming": "Data in days!"
+  "h5-asteroids-incoming": "Data in days!",
+  "statistics-danger-true": "Dangerous",
+  "statistics-danger-false": "Harmless"
 }

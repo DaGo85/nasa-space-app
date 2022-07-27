@@ -81,10 +81,16 @@ function Asteroids() {
       <GenericCard added="mt-10" height="h-[500px]">
         {asteroids ? (
           <Statistics
-            asteroidsTotal={asteroids.asteroidsTotal}
-            nearestAsteroid={asteroids.nearestAsteroid}
-            harmlessAsteroids={asteroids.harmlessAsteroids}
-            dangerousAsteroids={asteroids.dangerousAsteroids}
+            cardOne={asteroids.asteroidsTotal}
+            cardTwo={asteroids.nearestAsteroid}
+            cardThree={asteroids.harmlessAsteroids}
+            cardFour={asteroids.dangerousAsteroids}
+            title={{
+              one: "Asteroids Total:",
+              two: "Dangerous Asteroids:",
+              three: "Harmless Asteroids:",
+              four: "Nearest Asteroids:",
+            }}
           />
         ) : (
           <SkeletonCardStatistic />
@@ -105,7 +111,23 @@ function Asteroids() {
                 item={{ title: item.name }}
                 index={index}
               >
-                <div></div>
+                <h2 className="font-bold text-2xl">Name: {item.name}</h2>
+                <Statistics
+                  cardOne={
+                    item["is_potentially_hazardous_asteroid"]
+                      ? t("statistics-danger-true")
+                      : t("statistics-danger-false")
+                  }
+                  cardTwo={item.name}
+                  cardThree={asteroids.harmlessAsteroids}
+                  cardFour={asteroids.dangerousAsteroids}
+                  title={{
+                    one: "Asteroids Total:",
+                    two: "Dangerous Asteroids:",
+                    three: "Harmless Asteroids:",
+                    four: "Nearest Asteroids:",
+                  }}
+                />
               </Accordion>
             </motion.div>
           ))}

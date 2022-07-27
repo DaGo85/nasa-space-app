@@ -1,9 +1,4 @@
-function Statistics({
-  dangerousAsteroids,
-  asteroidsTotal,
-  nearestAsteroid,
-  harmlessAsteroids,
-}: any) {
+function Statistics({ cardOne, cardTwo, cardThree, cardFour, title }: any) {
   return (
     <section className="text-primaryLightOn dark:text-primaryDarkOn body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -19,40 +14,40 @@ function Statistics({
           <div className="p-4 sm:w-1/4 w-1/2">
             <div className="bg-primaryLight dark:bg-primaryDark rounded-lg p-2 xl:p-6">
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
-                {asteroidsTotal}
+                {cardOne}
               </h2>
               <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
-                Asteroids total:
+                {title.one}
               </p>
             </div>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <div className="bg-primaryLight dark:bg-primaryDark rounded-lg p-2 xl:p-6">
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
-                {dangerousAsteroids}
+                {cardTwo}
               </h2>
               <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
-                Dangerous Asteroids:
+                {title.two}
               </p>
             </div>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <div className="bg-primaryLight dark:bg-primaryDark rounded-lg p-2 xl:p-6">
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
-                {harmlessAsteroids}
+                {cardThree}
               </h2>
               <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
-                Harmless Asteroids:
+                {title.three}
               </p>
             </div>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <div className="bg-primaryLight dark:bg-primaryDark rounded-lg p-2 xl:p-6">
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-primaryLightOn dark:text-primaryDarkOn">
-                {nearestAsteroid}
+                {cardFour}
               </h2>
               <p className="leading-relaxed text-secondaryLightContainerOn dark:text-primaryDarkOn font-bold">
-                Nearest Asteroids:
+                {title.four}
               </p>
             </div>
           </div>
