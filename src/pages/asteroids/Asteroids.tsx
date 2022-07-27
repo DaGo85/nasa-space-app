@@ -82,14 +82,14 @@ function Asteroids() {
         {asteroids ? (
           <Statistics
             cardOne={asteroids.asteroidsTotal}
-            cardTwo={asteroids.nearestAsteroid}
+            cardTwo={asteroids.dangerousAsteroids}
             cardThree={asteroids.harmlessAsteroids}
-            cardFour={asteroids.dangerousAsteroids}
+            cardFour={asteroids.nearestAsteroid}
             title={{
-              one: "Asteroids Total:",
-              two: "Dangerous Asteroids:",
-              three: "Harmless Asteroids:",
-              four: "Nearest Asteroids:",
+              one: t("statistics-total-one"),
+              two: t("statistics-total-two"),
+              three: t("statistics-total-three"),
+              four: t("statistics-total-four"),
             }}
           />
         ) : (
@@ -118,14 +118,20 @@ function Asteroids() {
                       ? t("statistics-danger-true")
                       : t("statistics-danger-false")
                   }
-                  cardTwo={item.name}
-                  cardThree={asteroids.harmlessAsteroids}
+                  cardTwo={
+                    item["estimated_diameter"]["meters"][
+                      "estimated_diameter_min"
+                    ]
+                  }
+                  cardThree={
+                    item["close_approach_data"][0]["close_approach_date"]
+                  }
                   cardFour={asteroids.dangerousAsteroids}
                   title={{
-                    one: "Asteroids Total:",
-                    two: "Dangerous Asteroids:",
-                    three: "Harmless Asteroids:",
-                    four: "Nearest Asteroids:",
+                    one: t("statistics-accordion-one"),
+                    two: t("statistics-accordion-two"),
+                    three: t("statistics-accordion-three"),
+                    four: t("statistics-accordion-four"),
                   }}
                 />
               </Accordion>
