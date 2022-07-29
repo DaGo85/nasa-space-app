@@ -3,11 +3,7 @@ import { SocialIconsI } from "../../ts/interfaces/global_interfaces";
 export const NavBarLinkItems = [
   { name: "Home", link: "/", label: "link to landing page" },
   { name: "Impressum", link: "/impressum", label: "link to Impressum" },
-  {
-    name: "APOD",
-    link: "/APOD",
-    label: "link to APOD(Astronomic picture of the day)",
-  },
+
   { name: "Features", link: "/features", label: "link to Features" },
 ];
 
@@ -37,15 +33,17 @@ export const featureContent = [
     id: 1,
     url: "/asteroids",
     title: "News about incomming asteroids",
-    text: "This is a plcaeholder, please wait for content",
+    label: "link to Asteroids section of the app",
+    text: "This is a placeholder, please wait for content",
     view: "0 0 384 512",
     path: "M160 32.01L32 32.01c-17.67 0-32 14.33-32 32v384c0 17.67 14.33 32 32 32l128-.0073c123.5 0 224-100.5 224-224S283.5 32.01 160 32.01zM160 416H64v-320h96c88.22 0 160 71.78 160 159.1S248.2 416 160 416z",
   },
   {
     id: 2,
-    url: "/meteors",
-    title: "Meteor observer",
-    text: "This is a plcaeholder, please wait for content",
+    url: "/apod",
+    title: "Astronomic Picture of the day",
+    label: "link to APOD(Astronomic picture of the day)",
+    text: "This is a placeholder, please wait for content",
     view: "0 0 384 512",
     path: "M160 32.01L32 32.01c-17.67 0-32 14.33-32 32v384c0 17.67 14.33 32 32 32l128-.0073c123.5 0 224-100.5 224-224S283.5 32.01 160 32.01zM160 416H64v-320h96c88.22 0 160 71.78 160 159.1S248.2 416 160 416z",
   },
