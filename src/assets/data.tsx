@@ -1,4 +1,6 @@
 import { SocialIconsI } from "../../ts/interfaces/global_interfaces";
+import asteroids from "./asteroids.jpg";
+import apod from "./apod.jpg";
 
 export const NavBarLinkItems = [
   { name: "Home", link: "/", label: "link to landing page" },
@@ -33,6 +35,7 @@ export const featureContent = [
     id: 1,
     url: "/asteroids",
     title: "News about incomming asteroids",
+    icon: asteroids,
     label: "link to Asteroids section of the app",
     text: "This is a placeholder, please wait for content",
     view: "0 0 384 512",
@@ -42,6 +45,7 @@ export const featureContent = [
     id: 2,
     url: "/apod",
     title: "Astronomic Picture of the day",
+    icon: apod,
     label: "link to APOD(Astronomic picture of the day)",
     text: "This is a placeholder, please wait for content",
     view: "0 0 384 512",

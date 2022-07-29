@@ -72,13 +72,13 @@ function Asteroids() {
         text={t("asteroids-modal")}
         buttontext={t("asteroids-modal-button")}
       />
-      <GenericCard added="mt-10" height="h-[300px]">
+      <GenericCard width="w-11/12" added="mt-10" height="h-[300px]">
         <h3>{t("h3-asteroids-incoming")}</h3>
         <h4>{t("h4-asteroids-incoming")}</h4>
         <h5>{t("h5-asteroids-incoming")}</h5>
         <ToolBar handleDate={handleDate} />
       </GenericCard>
-      <GenericCard added="mt-10" height="h-[500px]">
+      <GenericCard width="3/5" added="mt-10" height="h-[500px]">
         {asteroids ? (
           <Statistics
             cardOne={asteroids.asteroidsTotal}

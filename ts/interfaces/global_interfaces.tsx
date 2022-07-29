@@ -34,6 +34,7 @@ export interface GenericCardI {
   children: JSX.Element | JSX.Element[];
   added: string;
   height: string;
+  width: string;
 }
 
 export interface NavBarLinksI {

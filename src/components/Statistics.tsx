@@ -1,6 +1,11 @@
 function Statistics({ cardOne, cardTwo, cardThree, cardFour, title }: any) {
   return (
-    <section className="text-primaryLightOn dark:text-primaryDarkOn body-font">
+    <section
+      className="bg-primaryLightContainer text-primaryLightContainerOn 
+        dark:bg-secondaryDarkContainer
+        dark:text-secondaryDarkContainerOn
+         body-font"
+    >
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-8">
           <div className="w-full mb-6 lg:mb-0">

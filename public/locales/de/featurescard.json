@@ -1,12 +1,12 @@
 {
   "features-card": [
     {
-      "featurescard-title": "Meteor",
-      "featurescard-subtitle": "Die ist ein Platzhalter"
+      "featurescard-title": "Asteroiden",
+      "featurescard-subtitle": "Bekomme die neuesten Informationen über Asteroiden"
     },
     {
-      "featurescard-title": "Meteor2",
-      "featurescard-subtitle": "Die ist ein Platzhalter"
+      "featurescard-title": "APOD",
+      "featurescard-subtitle": "Lass dir die schönheit des Universum zeigen"
     }
   ]
 }

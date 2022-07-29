@@ -13,18 +13,17 @@ function FeaturesCard() {
             to={featureContent[index].url}
             key={featureContent[index].id}
             className="flex flex-col min-w-[320px] 
-            items-center px-4 md:px-12 rounded-xl shadow-lg bg-secondaryLight dark:bg-secondaryDark text-center gap-6 py-6 transition-all hover:scale-105 duration-500"
+            items-center px-4 md:px-12 rounded-xl shadow-lg bg-primaryLightContainer text-primaryLightContainerOn 
+            dark:bg-secondaryDarkContainer dark:text-secondaryDarkContainerOn border-primaryLightContainerOn
+         dark:border-secondaryDarkContainerOn text-center gap-6 py-6 transition-all hover:scale-105 duration-500 border-2"
           >
             <h4 className="">{t(text["featurescard-title"])}</h4>
             <p className="">{t(text["featurescard-subtitle"])}</p>
-            <svg
-              className="w-52 mx-4 mb-1 fill-backgroundLightOn dark:fill-backgroundDarkOn bg-backgroundLight dark:bg-backgroundDark"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox={featureContent[index].view}
-              fill="currentColor"
-            >
-              <path d={featureContent[index].path}></path>
-            </svg>
+            <img
+              className=""
+              src={featureContent[index].icon}
+              alt={featureContent[index].title}
+            />
           </Link>
         );
       })}
