@@ -72,15 +72,16 @@ function Asteroids() {
         text={t("asteroids-modal")}
         buttontext={t("asteroids-modal-button")}
       />
-      <GenericCard width="w-11/12" added="mt-10" height="h-[300px]">
+      <GenericCard width="w-4/5 md:w-3/5" added="mt-10" height="h-[400px]">
         <h3>{t("h3-asteroids-incoming")}</h3>
         <h4>{t("h4-asteroids-incoming")}</h4>
         <h5>{t("h5-asteroids-incoming")}</h5>
         <ToolBar handleDate={handleDate} />
       </GenericCard>
-      <GenericCard width="3/5" added="mt-10" height="h-[500px]">
+      <GenericCard width="3/5" added="mt-2" height="h-[600px]">
         {asteroids ? (
           <Statistics
+            typeOfStatistics={t("type-of-statistics")}
             cardOne={asteroids.asteroidsTotal}
             cardTwo={asteroids.dangerousAsteroids}
             cardThree={asteroids.harmlessAsteroids}
@@ -113,6 +114,7 @@ function Asteroids() {
               >
                 <h2 className="font-bold text-2xl">Name: {item.name}</h2>
                 <Statistics
+                  typeOfStatistics={t("type-of-statistics-accordion")}
                   cardOne={
                     item["is_potentially_hazardous_asteroid"]
                       ? t("statistics-danger-true")
