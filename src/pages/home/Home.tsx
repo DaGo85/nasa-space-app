@@ -20,6 +20,7 @@ function Home() {
       />
       <IntroCard
         number={t("card-1-number")}
+        title={t("card-1-title")}
         text={t("card-1-text")}
         button={t("card-1-button")}
         background={cardOne}
@@ -34,6 +35,7 @@ function Home() {
       />
       <IntroCard
         number={t("card-2-number")}
+        title={t("card-2-title")}
         text={t("card-2-text")}
         button={t("card-2-button")}
         background={cardTwo}
@@ -48,6 +50,7 @@ function Home() {
       />
       <IntroCard
         number={t("card-3-number")}
+        title={t("card-3-title")}
         text={t("card-3-text")}
         button={t("card-3-button")}
         background={cardThree}

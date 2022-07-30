@@ -1,4 +1,12 @@
-function IntroCard({ number, text, button, background, link, idKey }: any) {
+function IntroCard({
+  number,
+  text,
+  button,
+  background,
+  link,
+  idKey,
+  title,
+}: any) {
   return (
     <div
       id={idKey}
@@ -17,8 +25,8 @@ function IntroCard({ number, text, button, background, link, idKey }: any) {
           <div className="grid grid-cols-12 gap-1">
             <div className="relative my-6 px-8 col-span-12 sm:col-span-12 md:col-span-7 lg:col-span-7 xxl:col-span-7">
               <div className="border-l-4 border-lightOutline dark:border-darkOutline py-20 px-5 mx-2 absolute left-0">
-                <p className="italic text-primaryLightOn dark:text-primaryDarkOn text-xl md:text-4xl lg:text-6xl uppercase text-center font-semibold ">
-                  NASA Space APP
+                <p className="italic text-primaryLightOn dark:text-primaryDarkOn text-md md:text-2xl lg:text-4xl uppercase text-center font-semibold ">
+                  {title}
                 </p>
               </div>
               <div className="underline text-primaryLightOn dark:text-primaryDarkOn font-semibold text-xl mb-4">

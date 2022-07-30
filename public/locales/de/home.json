@@ -1,20 +1,18 @@
 {
   "card-1-number": "Nummer 1",
-  "card-1-text": "Dies ist ein Platzhalter! Willkommen auf meiner Page!",
+  "card-1-title": "NASA space App",
+  "card-1-text": "Willkommen auf meiner Page! Entdecke faszinierende Fakten rund um das Thema Weltraum.",
   "card-1-button": "Weiter",
 
   "card-2-number": "Nummer 2",
-  "card-2-text": "Dies ist ein Platzhalter! Willkommen auf meiner Page!",
+  "card-2-title": "Daten von der NASA breitgestellt",
+  "card-2-text": "Alle Darstellungen, Daten und Fakten wurden freundlicherweise von der NASA höchselbst zur verfügung gestellt. Dafür ein großes Dankeschön!",
   "card-2-button": "Weiter",
 
   "card-3-number": "Nummer 3",
-  "card-3-text": "Dies ist ein Platzhalter! Willkommen auf meiner Page!",
-  "card-3-button": "Weiter",
+  "card-3-title": "Tolle und schöne Entdeckungen!",
+  "card-3-text": "Bitte verweilen Sie eine Weile und genießen Sie die von der NASA bereitgestellten und über meine APP angezeigten Inhalte. Weiter unten sind herorgehobene Inhalte verlinkt.",
 
-  "p-1-home": "Bitte bleib eine Weile",
-  "p-2-home": "und",
-  "p-3-home": "genieße den Inhalt!",
-
-  "home-link-h2": "Dies ist ein Platzhalter!",
+  "home-link-h2": "Entdeckungsabschnitt",
   "home-link-h3": "Klicke für mehr Inhalt!"
 }

@@ -1,21 +1,18 @@
 {
-  "card-1-number": "Number 2",
-  "card-1-text": "This is a placeholder! Welcome to my Page!",
+  "card-1-number": "Number 1",
+  "card-1-title": "NASA space App",
+  "card-1-text": "Welcome to my page! Discover fascinating facts about space.",
   "card-1-button": "Onward",
 
   "card-2-number": "Number 2",
-  "card-2-text": "Dies ist ein Platzhalter! Willkommen auf meiner Page!",
+  "card-2-title": "Data provided by NASA",
+  "card-2-text": "All representations, data and facts were kindly provided by NASA itself. A big thank you for that!",
   "card-2-button": "Onward",
 
   "card-3-number": "Number 3",
-  "card-3-text": "Dies ist ein Platzhalter! Willkommen auf meiner Page!",
-  "card-3-button": "Onward",
+  "card-3-title": "Great and beautiful discoveries!",
+  "card-3-text": "Please stay a while and enjoy the content provided by the NASA and displayed through my APP. Featured content is linked below.",
 
-  "h1-home": "Welcome to my portfolio!",
-  "p-1-home": "Please stay a while",
-  "p-2-home": "and",
-  "p-3-home": "enjoy the content!",
-
-  "home-link-h2": "This is a placeholder!",
+  "home-link-h2": "Discovery section",
   "home-link-h3": "Click for more content!"
 }
