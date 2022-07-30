@@ -47,11 +47,7 @@ function APOD() {
           setter={handleGetNew}
           text={t("apod-button-new")}
         />
-        <UniverseButton
-          icon="Info"
-          setter={handleGetInfo}
-          text={t("apod-button-Info")}
-        />
+        <UniverseButton icon="Info" setter={handleGetInfo} />
       </ButtonBackgroundCard>
       <InfoModal
         showModal={showModal}

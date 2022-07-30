@@ -35,17 +35,17 @@ const icons = {
   ),
 };
 
-function UniverseButton({ setter, text, icon }: any) {
+function UniverseButton({ setter, icon }: any) {
   return (
     <button
       onClick={() => setter()}
       className="inline-flex items-center px-4 py-2 bg-primaryLight dark:bg-primaryDark hover:bg-primaryLight/60
           dark:hover:bg-primaryDark/60 border-primaryLightOn dark:border-primaryDarkOn
-          hover:border-primaryDarkOn dark:hover:border-primaryLightOn text-sm font-medium rounded-md "
+          hover:border-primaryDarkOn dark:hover:border-primaryLightOn text-xl font-bold rounded-md"
     >
       {/* @ts-ignore */}
       {icon && icons[icon]}
-      {text}
+      Info
     </button>
   );
 }

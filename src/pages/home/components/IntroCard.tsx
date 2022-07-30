@@ -37,7 +37,7 @@ function IntroCard({
             <div className="col-span-12 sm:col-span-12 md:col-span-5 lg:col-span-5 xxl:col-span-5">
               <div className="relative bg-secondaryLight dark:bg-secondaryDark h-full md:h-96 w-full bg-opacity-50 dark:bg-opacity-50 rounded-tr-lg rounded-br-lg">
                 <div className="p-8">
-                  <p className="text-primaryLightOn dark:text-primaryDarkOn text-xs md:text-sm lg:text-xl mb-4">
+                  <p className="text-primaryLightOn dark:text-primaryDarkOn text-xs md:text-sm lg:text-xl my-16 py-4">
                     {text}
                   </p>
                   <div className="bottom-0 absolute p-2 right-0">
