@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// todo: Change color of button for more contrast
+
 function Accordion({ children, item, index }: any) {
   const [isActive, setIsActive] = useState(index === 0 ? true : false);
   return (

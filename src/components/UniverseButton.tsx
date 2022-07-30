@@ -35,7 +35,7 @@ const icons = {
   ),
 };
 
-function UniverseButton({ setter, icon }: any) {
+function UniverseButton({ setter, text, icon }: any) {
   return (
     <button
       onClick={() => setter()}
@@ -45,7 +45,7 @@ function UniverseButton({ setter, icon }: any) {
     >
       {/* @ts-ignore */}
       {icon && icons[icon]}
-      Info
+      {text}
     </button>
   );
 }

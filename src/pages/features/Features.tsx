@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import HRIcon from "../../components/HRIcon";
 import InfoModal from "../../components/InfoModal";
+import MainTitle from "../../components/MainTitle";
 import UniverseButton from "../../components/UniverseButton";
 import FeaturesCard from "./components/FeaturesCard";
 
@@ -21,9 +22,7 @@ function Features() {
         }
         view="0 0 576 512"
       />
-      <h1 className="font-extrabold text-3xl text-primaryLightOn shadow-2xl">
-        {t("features-title")}
-      </h1>
+      <MainTitle title={t("features-title")} />
       <UniverseButton
         icon="Info"
         setter={handleGetInfo}

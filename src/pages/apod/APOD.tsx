@@ -10,6 +10,8 @@ import { motion } from "framer-motion";
 import ButtonBackgroundCard from "../../components/ButtonBackgroundCard";
 import UniverseButton from "../../components/UniverseButton";
 import { accordionVariants } from "../../utility/motionVariants";
+import MainTitle from "../../components/MainTitle";
+import SubTitle from "../../components/SubTitle";
 
 function APOD() {
   const [aPod, setApod] = useState<any>(null);
@@ -39,15 +41,19 @@ function APOD() {
 
   return (
     <>
-      <h1 className="">{t("apod-h1")}</h1>
-      <h2>{t("apod-h2-subtitle")}</h2>
+      <MainTitle title={t("apod-h1")} />
+      <SubTitle subTitle={t("apod-h2-subtitle")} />
       <ButtonBackgroundCard>
         <UniverseButton
           icon="New"
           setter={handleGetNew}
           text={t("apod-button-new")}
         />
-        <UniverseButton icon="Info" setter={handleGetInfo} />
+        <UniverseButton
+          icon="Info"
+          setter={handleGetInfo}
+          text={t("apod-button-info")}
+        />
       </ButtonBackgroundCard>
       <InfoModal
         showModal={showModal}

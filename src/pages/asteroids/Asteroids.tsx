@@ -14,6 +14,7 @@ import Accordion from "../../components/Accordion";
 import SkeletonCard from "../../components/skeletons/SkeletonCardApod";
 import SkeletonAccordionApod from "../../components/skeletons/SkeletonAccordionApod";
 import { accordionVariants } from "../../utility/motionVariants";
+import MainTitle from "../../components/MainTitle";
 
 function Asteroids() {
   const [asteroids, setAsteroids] = useState<any>(null);
@@ -58,13 +59,11 @@ function Asteroids() {
         }
         view="0 0 512 512"
       />
-      <h1 className="font-extrabold text-3xl text-primaryLightOn dark:text-primaryDarkOn shadow-2xl">
-        {t("asteroids-h1")}
-      </h1>
+      <MainTitle title={t("asteroids-h1")} />
       <UniverseButton
         icon="Info"
         setter={handleGetInfo}
-        text={t("apod-button-Info")}
+        text={t("asteroids-button-info")}
       />
       <InfoModal
         showModal={showModal}

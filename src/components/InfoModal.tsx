@@ -9,7 +9,7 @@ function InfoModal({ text, showModal, setShowModal, buttontext }: InfoModalI) {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
-          className="overflow-y-auto overflow-x-hidden fixed bottom-50 right-50 left-50 top-40 z-50 md:inset-50 md:h-full pt-80"
+          className="overflow-y-auto overflow-x-hidden fixed bottom-50 right-50 left-50 top-0 z-50 md:-top-20 md:h-full pt-80"
         >
           <div className="relative p-4 w-full max-w-md h-full md:h-auto">
             <div className="relative bg-lightVariantSurface dark:bg-darkVariantSurface rounded-lg shadow">
